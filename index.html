@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesse Cruz — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primo-dark: #00000F;
+  --primo-green: #0ce198;
+  --primo-green-deep: #0ab87d;
+  --primo-green-soft: #e8faf3;
+  --ink: #00000F;
+  --warm: #f8f9fa;
+  --warm-mid: #eef0f2;
+  --accent: #0ce198;
+  --accent-soft: #e8faf3;
+  --text: #2a2a35;
+  --text-light: #5a5d6b;
+  --white: #ffffff;
+  --border: #dde0e5;
+  --shadow: 0 2px 20px rgba(0,0,15,0.06);
+  --shadow-lg: 0 8px 40px rgba(0,0,15,0.10);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background: var(--warm);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--primo-dark) 0%, #0a0a1a 40%, #111125 100%);
+  color: white;
+  padding: 80px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 70% 30%, rgba(12,225,152,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(12,225,152,0.04) 0%, transparent 40%);
+  animation: drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-30px, 20px) rotate(2deg); }
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label {
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primo-green);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--primo-green);
+}
+
+.hero-title-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: var(--primo-green);
+  margin-top: -8px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  opacity: 0.75;
+}
+
+.hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── NAV STRIP ── */
+.nav-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow-x: auto;
+}
+
+.nav-strip-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.nav-strip a {
+  padding: 14px 18px;
+  font-size: 0.82rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-light);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-strip a:hover,
+.nav-strip a.active {
+  color: var(--primo-dark);
+  border-bottom-color: var(--primo-green);
+}
+
+/* ── MAIN LAYOUT ── */
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── SECTION ── */
+.section {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-num {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primo-green);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.65rem;
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-requirement {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.section p {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+/* ── EVIDENCE CARDS ── */
+.evidence-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .evidence-row { grid-template-columns: 1fr; }
+}
+
+.evidence-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.evidence-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--primo-green);
+  transform: translateY(-2px);
+}
+
+.evidence-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.card-type {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primo-green-deep);
+  margin-bottom: 8px;
+}
+
+.card-type.campaign { color: #e8491d; }
+.card-type.tool { color: #6b5ce7; }
+.card-type.output { color: var(--primo-green-deep); }
+
+.evidence-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.evidence-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+.evidence-card a.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primo-green-deep);
+  text-decoration: none;
+  margin-top: 10px;
+  transition: gap 0.2s;
+}
+
+.evidence-card a.card-link:hover { gap: 8px; }
+
+/* ── SKILLS GRID ── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.skill-tag:hover {
+  background: var(--primo-green);
+  color: var(--primo-dark);
+  border-color: var(--primo-green);
+}
+
+.skill-tag.primary {
+  background: var(--primo-green);
+  color: var(--primo-dark);
+  border-color: var(--primo-green);
+}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight-box {
+  background: var(--primo-dark);
+  color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 24px;
+  border-left: 4px solid var(--primo-green);
+}
+
+.highlight-box h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primo-green);
+}
+
+.highlight-box p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* ── INTRO SECTION ── */
+.intro-section {
+  padding: 48px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.intro-section p {
+  font-size: 0.95rem;
+  max-width: 720px;
+}
+
+.role-map {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .role-map { grid-template-columns: 1fr; }
+}
+
+.role-map-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.role-map-item:hover {
+  border-color: var(--primo-green);
+  box-shadow: var(--shadow);
+}
+
+.role-map-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primo-green);
+}
+
+.role-map-label {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+/* ── FOOTER CTA ── */
+.footer-cta {
+  background: var(--primo-dark);
+  color: white;
+  padding: 56px 40px;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-cta h2 span { color: var(--primo-green); }
+
+.footer-cta p {
+  font-size: 0.92rem;
+  opacity: 0.7;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 60px 24px 48px; }
+  .main { padding: 0 24px; }
+  .nav-strip { padding: 0 16px; }
+  .nav-strip a { padding: 12px 12px; font-size: 0.76rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-meta { gap: 16px; }
+  .footer-cta { padding: 40px 24px; }
+}
+
+/* ── ANIMATION ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section:nth-child(2) { animation-delay: 0.05s; }
+.section:nth-child(3) { animation-delay: 0.1s; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero">
+  <div class="hero-inner fade-in">
+    <div class="hero-label">Portfolio</div>
+    <h1>Jesse Cruz</h1>
+    <p class="hero-title-sub">Strategic Communications & Digital Media</p>
+    <p class="hero-sub">I design and deliver integrated digital communications for international organisations — coordinating social media, web, video, and campaign strategies to get the right message to the right audience at the right moment. 15 years across the UN system and INGOs, turning institutional mandates into content people actually engage with.</p>
+    <div class="hero-meta">
+      <span>📍 Hainan, China</span>
+      <span>🌐 English · Spanish</span>
+      <span>🏛 WMO · UNICEF · FSC</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav-strip">
+  <div class="nav-strip-inner">
+    <a href="#overview">Overview</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#content">Content</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#listening">Listening</a>
+    <a href="#accessibility">Accessibility</a>
+    <a href="#analytics">Analytics</a>
+    <a href="#events">Events</a>
+    <a href="#capacity">Capacity</a>
+    <a href="#tools">Tools</a>
+  </div>
+</nav>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main class="main">
+
+  <!-- OVERVIEW -->
+  <div class="intro-section fade-in" id="overview">
+    <h2>How my experience maps to this role</h2>
+    <p>At WMO, I took the organisation from 200,000 total followers to over 1.3 million across all channels in four years — while repositioning the channel strategy, prioritising LinkedIn, and exploring new platforms and audiences.</p>
+    <p>Each section below corresponds directly to a responsibility area in the UNITAR Terms of Reference. I've matched evidence from my career to show how I got there — in the UN system, at scale, and with measurable results.</p>
+  </div>
+
+  <!-- 01 STRATEGY -->
+  <section class="section fade-in" id="strategy">
+    <div class="section-num">01</div>
+    <h2>Strategic Planning & Policy Development</h2>
+    <div class="section-requirement">JD: "Lead the implementation and iterative refinement of digital communication strategy and social media policy."</div>
+
+    <p>The last two campaigns I led were both global, both multi-agency, and both had policy aspirations at their core.</p>
+
+    <p>Early Warnings for All was about making sure every country could give its people a heads-up when a natural hazard was heading their way. The International Year of Glaciers Preservation was about raising awareness on an issue that was very little known but deeply important for the sustainable development goals — and ultimately, the Year became a Decade on Glaciers that the UN will launch in 2026. In both, we partnered with other UN agencies. In both, the campaigns were hugely successful.</p>
+
+    <p>The Trello boards linked below show the full breadth of what strategic planning looks like in practice — everything from visual guidelines to key messages, hashtags, content repositories, and partner coordination. They show discipline, and they show collaboration.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type campaign">Campaign</div>
+        <h4>Early Warnings for All</h4>
+        <p>Multi-agency global campaign to ensure every person on Earth is protected by an early warning system. I led the communications workstream — visual identity, brand guidelines, hero videos, member interviews, and platform-specific social media templates for partner outreach.</p>
+        <a class="card-link" href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank">View campaign assets on Trello →</a>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type campaign">Campaign</div>
+        <h4>International Year of Glaciers Preservation</h4>
+        <p>Multi-agency campaign with UNESCO and partners. Dynamic timelapse cards, data visualisations, and video assets that made an invisible crisis visible — and helped turn a single Year into a UN Decade.</p>
+        <a class="card-link" href="https://trello.com/b/OdRaAOJ0/international-year-of-glaciers-preservation-2025" target="_blank">View campaign assets on Trello →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CAMPAIGNS & CONTENT -->
+  <section class="section fade-in" id="content">
+    <div class="section-num">02</div>
+    <h2>Campaign Management & Content Creation</h2>
+    <div class="section-requirement">JD: "Develop inclusive, engaging, and visually compelling multimedia content. Manage editorial calendars. Produce and edit content for high-visibility campaigns."</div>
+
+    <p>Awareness is just the beginning of the journey. It moves through willingness, into advocacy, and ultimately into action. I know all parts of that journey and how to map people through it — working backwards from a concrete objective, mapping milestones like falling dominoes, and building content that earns attention by embedding the mission inside human stories people actually want to share.</p>
+
+    <p>The examples below show what that looks like in practice.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type campaign">Hero Video</div>
+        <h4>Early Warnings for All</h4>
+        <p>Less than three minutes, but it captures everything: knowing the material inside and out, making it real for the non-expert, inclusive of the whole system, and a narrative that mobilises rather than paralyses — in language that resonates with Member States.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=35FvB7lst6o" target="_blank">Watch on YouTube →</a>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type campaign">Storytelling</div>
+        <h4>From technical report to human story</h4>
+        <p>Extracted a real story from a technical report on heatwaves — worked with national partners and project leads to flesh it out, connect it to what it actually means in a city, in this case outdoor workers in Greece.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=LTnXvG8FXRk" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="evidence-card full-width">
+        <div class="card-type campaign">Community Content</div>
+        <h4>Borrowing from the community</h4>
+        <p>Sometimes the most powerful content isn't something you create — it's something you borrow from the community and reframe with your key message. More powerful than numbers and words.</p>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7283456793706434560/" target="_blank">View on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 PLATFORMS -->
+  <section class="section fade-in" id="platforms">
+    <div class="section-num">03</div>
+    <h2>Platform Management & Community Engagement</h2>
+    <div class="section-requirement">JD: "Manage day-to-day operations of social media platforms. Facilitate real-time engagement, community building, and proactive responses."</div>
+
+    <p>Day to day, it's about being present across all channels — scheduling, publishing, and checking in on the conversations happening around our content. Sometimes that's a broken link someone flagged in the comments. Sometimes it's a question that needs an expert roped in. That's the baseline. But advanced community engagement means following the wider conversation, not just responding to what lands on your page — and that requires dedicated listening tools.</p>
+
+    <p>I've managed both institutional and leadership-level accounts, and I understand the distinct voice each requires. Corporate channels need authority and consistency. Leadership channels need personality and strategic signalling. Conflating them weakens both.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type tool">Preferred</div>
+        <h4>Sprout Social</h4>
+        <p>My go-to for day-to-day platform management — scheduling, publishing, and planning across all channels from a single dashboard and mobile app. The tagging function is what sets it apart, going beyond standard reporting numbers to track content by campaign, theme, or objective.</p>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type tool">Tool</div>
+        <h4>Hootsuite</h4>
+        <p>Experienced across Hootsuite for multi-channel scheduling and monitoring. Solid tool for teams managing high-volume publishing across platforms.</p>
+      </div>
+    </div>
+    <div class="evidence-row">
+      <div class="evidence-card full-width">
+        <div class="card-type tool">Listening</div>
+        <h4>Meltwater</h4>
+        <p>For community engagement that goes beyond the comments — Meltwater is where I follow the broader conversation, track media coverage, and monitor how narratives develop around key moments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 LISTENING -->
+  <section class="section fade-in" id="listening">
+    <div class="section-num">04</div>
+    <h2>Social Listening & Reputational Management</h2>
+    <div class="section-requirement">JD: "Monitor online conversations and sentiment. Conduct reputational risk assessments. Coordinate responses to reputational risks."</div>
+
+    <p>Social listening is about following the conversations that matter — especially around key moments like report launches and flagship publications. We don't want the conversation we're advancing to be hijacked, and with misinformation and disinformation growing across all channels, monitoring is essential. It was actually through moderating social media and tracking a growing trend of climate disinformation that I was able to brief and convince senior leadership at WMO to join the UN's Global Initiative on Information Integrity. Social listening didn't just flag a risk — it led to an institutional decision.</p>
+
+    <p>That same awareness of how misinformation spreads is what led me to build an AI-powered chatbot trained on WMO's policy documents — making authoritative information more accessible at a time when it was needed most. The chatbot earned an award from the Royal Meteorological Society. Social listening informs everything: from daily community management to innovation pivots that update the entire digital strategy.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type output">Impact</div>
+        <h4>WMO joins UN Information Integrity Initiative</h4>
+        <p>Social media monitoring identified a growing trend of climate disinformation — which led to a briefing for senior leadership and WMO's decision to join the UN's global initiative.</p>
+        <a class="card-link" href="https://wmo.int/media/news/wmo-joins-global-initiative-information-integrity-fight-climate-disinformation" target="_blank">Read more →</a>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type output">Award</div>
+        <h4>Royal Meteorological Society Award</h4>
+        <p>An AI chatbot built to make WMO policy documents accessible — born from the insight that misinformation thrives when authoritative information is hard to find. Awarded for impact on science, policy, and society.</p>
+        <a class="card-link" href="https://www.rmets.org/rmets-awards/2024-winners/awards-impact-science-policy-or-society-2024" target="_blank">View award →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <section class="section fade-in" id="accessibility">
+    <div class="section-num">05</div>
+    <h2>Digital Accessibility & Inclusion</h2>
+    <div class="section-requirement">JD: "Ensure compliance with WCAG 2.1. Promote gender-responsive and culturally inclusive storytelling."</div>
+
+    <p>Accessibility gets built into the templates from the start — colours, font sizes, alt text, screen reader compatibility — so the team doesn't have to think about it every time. It's baked into the Canva templates I create, not bolted on at the end.</p>
+
+    <p>Inclusion means showing the whole story. The video below is one I recorded as part of the Early Warnings for All "In Her Own Words" series — interviewing members from different regions to understand what early warnings actually look like on the ground. This one is in Spanish, featuring a woman in leadership, because inclusion means different languages, different regions, different people telling their own stories.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type campaign">Inclusive Storytelling</div>
+        <h4>In Her Own Words — Early Warnings for All</h4>
+        <p>Recorded and directed the interview series. This episode features a meteorologist speaking Spanish about what early warnings mean for her community — inclusive content by design.</p>
+        <a class="card-link" href="https://www.youtube.com/watch?v=ZNY24cMkuh0" target="_blank">Watch on YouTube →</a>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type output">Accessibility</div>
+        <h4>Accessible campaign templates</h4>
+        <p>Every template in the Early Warnings for All campaign was designed to meet accessibility standards — colour contrast, readable fonts, alt text built in. See them in the campaign asset board.</p>
+        <a class="card-link" href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank">View templates on Trello →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 ANALYTICS -->
+  <section class="section fade-in" id="analytics">
+    <div class="section-num">06</div>
+    <h2>Analytics, Reporting & Optimisation</h2>
+    <div class="section-requirement">JD: "Use digital analytics tools to generate performance dashboards. Track KPIs and adjust tactics."</div>
+
+    <p>A/B testing is at the heart of everything. It determines what we start, stop, or continue. You take out the emotion, you look at the data, you see what works. You stay open to experimentation, to new things. And when something works, you scale it. That's it.</p>
+
+    <p>For reporting, I keep it monthly — regular check-ins to see how we're tracking, spot spikes, and course-correct. But I also report around key moments: flagship publications, major events, campaign milestones — whenever the data tells a story worth sharing. And then one comprehensive year-end report that pulls it all together, including lessons learned that shape the next year's strategy.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card full-width">
+        <div class="card-type tool">Methodology</div>
+        <h4>Audit → Test → Optimise cycle</h4>
+        <p>Baseline audit → A/B testing → monthly check-in reports → start/stop/continue content reviews → annual social media report with lessons learned. Repeatable cycle designed to compound results year over year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 EVENTS -->
+  <section class="section fade-in" id="events">
+    <div class="section-num">07</div>
+    <h2>Event Support & Visual Production</h2>
+    <div class="section-requirement">JD: "Live social media coverage, digital promotion, registration support, post-event reporting. Photograph, film, and edit materials."</div>
+
+    <p>Whether I'm in the room running around as a roving reporter, catching interviews on my phone or my Fuji X-T4, or in a side room receiving photos and footage and editing them on Final Cut Pro or Adobe Lightroom — my go-tos for video and photo respectively — I've done it all.</p>
+
+    <p>On the ground, that means capturing content at a professional level: candids, b-roll, shots that make people look good — not posed. And then pushing it out on social media as live event coverage. Leading up to the event, it's building anticipation — helping support registration through event pages on LinkedIn or Facebook, promotional content, letting partners know what's coming. During the event, it's real-time coverage. After, it's the wrap-up reporting and making sure the best content has a life beyond the moment.</p>
+
+    <p>In the lead-up, during, and post-event — I've got it.</p>
+
+    <div class="evidence-row">
+      <div class="evidence-card">
+        <div class="card-type campaign">Event Coverage</div>
+        <h4>Sideline interviews</h4>
+        <p>On the ground at events, capturing interviews on the margins — turning a moment between sessions into content that tells the story.</p>
+        <a class="card-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7343156104165507073" target="_blank">View on LinkedIn →</a>
+      </div>
+      <div class="evidence-card">
+        <div class="card-type campaign">Field Reporting</div>
+        <h4>Costa Rica flash floods</h4>
+        <p>Went into the field after a flash flood in Costa Rica — interviewed people, captured b-roll, and edited on the fly. Sometimes the story is in the field, not the conference room.</p>
+        <a class="card-link" href="https://www.facebook.com/WorldMeteorologicalOrganization/videos/943306491173355/" target="_blank">Watch on Facebook →</a>
+      </div>
+    </div>
+
+  </section>
+  <section class="section fade-in" id="capacity">
+    <div class="section-num">08</div>
+    <h2>Capacity Building</h2>
+    <div class="section-requirement">JD: "Deliver tailored training sessions on digital tools, inclusive communications, and platform management."</div>
+
+    <p>I've trained junior professionals on their first corporate account and coached senior leadership on LinkedIn thought leadership. The approach is the same: give clear guidance, give breathing room, let people make mistakes — but never the same mistake twice. Monthly catch-ups where the team presents their work, pitches ideas, and gets live feedback. I make sure the fundamentals are there, and then I let them shine.</p>
+  </section>
+
+  <!-- 09 TOOLS -->
+  <section class="section fade-in" id="tools">
+    <div class="section-num">09</div>
+    <h2>Technical Toolkit</h2>
+    <div class="section-requirement">JD: Required proficiency across social platforms, Adobe Creative Cloud, Canva, Hootsuite/Sprout, Mailjet/Brevo, Trello, Google Analytics, MS 365.</div>
+
+    <p>You can breathe easy knowing I know how to use all of it. The internal project and communication tools — MS 365, the full suite. The publishing and listening platforms — Hootsuite, Sprout Social (my preference), Meta Business Suite. Asset sharing through Trello. Google Analytics and UTM tagging to make sure social and web are actually talking to each other. Canva is my go-to for social content creation and template design — I scaled it across 30+ focal points at WMO so they could produce on-brand content independently. I'm well versed in Adobe Creative Cloud, though I have a preference for Final Cut Pro over Premiere. But I'm flexible. I know these tools and I know how to apply them.</p>
+  </section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer-cta">
+  <h2>Ready to go from day one.</h2>
+  <p>I bring UN system fluency, operational discipline, and creative ambition — backed by 15 years of doing this work at the international level.</p>
+</footer>
+
+<script>
+// Sticky nav active state
+const sections = document.querySelectorAll('.section, .intro-section');
+const navLinks = document.querySelectorAll('.nav-strip a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const activeLink = document.querySelector(`.nav-strip a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+
+sections.forEach(section => observer.observe(section));
+
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = 'running';
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeEls.forEach(el => {
+  el.style.animationPlayState = 'paused';
+  fadeObserver.observe(el);
+});
+</script>
+
+</body>
+</html>
