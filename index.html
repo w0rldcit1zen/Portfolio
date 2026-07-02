@@ -10,19 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#00000F;
-    --green:#0CE198;
+    --ink:#1A1B2E;
+    --green:#D4A373;
     --mist:#B1B1B1;
     --paper:#FFFFFF;
     --line:#e6e6e6;
     --line-soft:#ededed;
-    --line-dark:#23231f;
+    --line-dark:#10111D;
     --body:#4a4a4a;
     --muted:#7a7a7a;
     --muted-2:#9a9a9a;
     --maxw:1120px;
   }
 
+  body::before{content:"";position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;background-image:url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');}
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
@@ -149,6 +150,12 @@
   .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
   .video-caption{font-size:13px;color:var(--muted);margin-top:10px;font-weight:400;}
 
+  .video-frame{cursor:pointer;}
+  .video-frame img.poster{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .video-frame .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s;}
+  .video-frame:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
+  .video-frame .play-btn::after{content:"";display:block;width:0;height:0;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent var(--ink);}
+
   /* ── PRINCIPAL ── */
   .principal-grid{display:grid;grid-template-columns:0.9fr 1.4fr;gap:56px;align-items:start;}
   @media(max-width:820px){.principal-grid{grid-template-columns:1fr;gap:32px;}}
@@ -268,26 +275,26 @@
       <h2>Four ways we build the meaning that moves your mandate.</h2>
       <p>One principal, a network of specialists, and AI-native workflows — scaled to the moment, from a single launch to a standing editorial function.</p>
     </div>
-    <div class="svc-grid reveal">
+        <div class="svc-grid reveal">
       <div class="svc">
-        <div class="s-num">01 — CONSULTING</div>
-        <h3>Strategy &amp; narrative architecture</h3>
-        <p>We diagnose where recognition is being won or withheld, then build the positioning, framing, and evidence that earn institutional legitimacy. Strategy first — always walking in having read the mandate.</p>
+        <div class="s-num">01 — STRATEGY</div>
+        <h3>Narrative architecture</h3>
+        <p>We diagnose where recognition is being won or withheld, then build the positioning and evidence that earn institutional legitimacy. Strategy first — always walking into the room having already read the mandate.</p>
       </div>
       <div class="svc">
-        <div class="s-num">02 — COMMUNICATION</div>
-        <h3>Editorial, campaigns &amp; production</h3>
-        <p>From flagship report launches to always-on presence — the editorial craft and multimedia production that carry a mandate to the audiences that matter, across channels and languages.</p>
-      </div>
-      <div class="svc">
-        <div class="s-num">03 — COACHING</div>
-        <h3>Capacity that stays</h3>
-        <p>We build capability, not dependency: training teams, writing the playbooks, and coaching communicators until the skill is theirs. Lift everyone, build on strengths, never the same mistake twice.</p>
-      </div>
-      <div class="svc">
-        <div class="s-num">04 — MEDIA</div>
+        <div class="s-num">02 — INFRASTRUCTURE</div>
         <h3>AI-native workflows</h3>
-        <p>Agentic content pipelines, answer-engine optimization, and social intelligence that extend a small team into continuous, cross-language, machine-legible presence. AI is already here; strategies without it are behind.</p>
+        <p>We build the systems behind the strategy — secure, private LLM environments and automated pipelines that protect institutional data while multiplying your editorial output. AI is already here; strategies without it are behind.</p>
+      </div>
+      <div class="svc">
+        <div class="s-num">03 — PRODUCTION</div>
+        <h3>Mandate-scale editorial</h3>
+        <p>From flagship report launches to always-on presence — editorial craft and multimedia production that carry a mandate to the audiences that matter, engineered for human readers and answer engines (AEO) alike.</p>
+      </div>
+      <div class="svc">
+        <div class="s-num">04 — CAPACITY</div>
+        <h3>Systems handoff &amp; coaching</h3>
+        <p>We build capability, not dependency. We train teams, document the workflows, and coach communicators until the infrastructure is entirely theirs to run. Lift everyone, build on strengths, never the same mistake twice.</p>
       </div>
     </div>
   </div>
@@ -298,34 +305,30 @@
     <div class="eyebrow reveal"><span class="sq"></span>SELECTED WORK</div>
     <div class="work-intro reveal">
       <p class="lede">Primo is built on a fifteen-year track record — across the UN system, UNICEF, and the Forest Stewardship Council.</p>
-      <p class="lede-sub">These are not claims; they are the proof behind the method. Each is drawn from the founder's career leading strategic communication inside the institutions Primo now serves. Certain details can be anonymized for client confidentiality on request.</p>
+      <p class="lede-sub">These are not claims; they are the proof behind the method, drawn from the founder's career inside the institutions Primo now serves. Certain details can be anonymized for client confidentiality on request.</p>
     </div>
 
     <!-- 01 -->
     <article class="case reveal">
       <div class="case-head"><span class="case-num">01</span><h3>Audience Growth at Global Scale</h3></div>
-      <div class="case-cap">Strategy · Integrated multi-channel delivery · Measurable impact</div>
-      <p>Audience growth at this scale is never an accident. It is the result of brutal discipline and clear strategy. At WMO, the total following across all channels sat at roughly 200,000. Four years later, it broke 1.3 million. We achieved that by shutting off the institutional noise — repositioning the channel strategy, prioritizing LinkedIn to reach policymakers directly, and building a content machine a small team could actually run. We shifted the focus from the organization to the people affected by climate on the ground: donors, youth, and local beneficiaries.</p>
-      <p>The numbers make the case, but the figure alone is not the achievement. #StateOfClimate was a conversation that already existed — but it skewed negative, wrapped in science so dull and jargon-heavy it repelled the very people it needed to reach. The 661% rise in mentions was not about volume; it was about changing the character of the conversation, shifting sentiment and bringing in voices that had never engaged.</p>
-      <p>The fix was a deliberate act of framing. Decades of communication research confirm that facts alone do not move people, and that doom-and-gloom "sacrifice" messaging loses to framing built on benefit, security, and agency. We made the science legible — partnering with climate scientist Ed Hawkins to put his now-iconic warming stripes at the heart of the visual narrative, a graphic proven to spark conversations in the very places they normally never happen. A 4.6% engagement rate against a 2–3% sector benchmark is what happens when dense science is finally made to feel human.</p>
+      <div class="case-cap">Strategy · Multi-channel delivery · Measurable impact</div>
+      <p>Audience growth at this scale is never an accident. It is the result of brutal discipline and clear strategy. At WMO, total following sat at roughly 200,000; four years later it broke 1.3 million. We shut off the institutional noise — repositioned the channel strategy, prioritized LinkedIn to reach policymakers directly, and built a content machine a small team could actually run.</p>
+      <p>The deeper win was a deliberate act of framing. #StateOfClimate already existed as a conversation, but it skewed negative and was wrapped in jargon that repelled the people it needed. Communication research is clear: doom-and-gloom loses to framing built on benefit, security, and agency. We made the science legible — partnering with climate scientist Ed Hawkins to put his warming stripes at the heart of the visual narrative — and mentions rose 661%, at 4.6% engagement against a 2–3% sector benchmark.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Result</div><h4>200K → 1.3M followers</h4><p>Total audience across all channels grew 6.5x in four years through structural channel repositioning and a storytelling-first approach.</p></div>
-        <div class="card"><div class="c-tag">Result</div><h4>661% sentiment shift</h4><p>#StateOfClimate mentions rose 661% in a year — reframing a negative, inaccessible conversation and drawing in new voices, at a 4.6% engagement rate.</p></div>
-      </div>
-      <div class="cards one">
-        <div class="card"><div class="c-tag">Example</div><h4>Making the science legible</h4><p>A live example of the accessible-visual approach behind the #StateOfClimate growth — Ed Hawkins' warming stripes turning dense temperature data into a graphic that stops the scroll.</p><a class="card-link" href="https://www.linkedin.com/posts/climateaction-share-7283456792716574720-1kF3/" target="_blank" rel="noopener">View the post on LinkedIn →</a></div>
+        <div class="card"><div class="c-tag">Result</div><h4>200K → 1.3M followers</h4><p>Audience grew 6.5x in four years through structural channel repositioning and a storytelling-first approach.</p></div>
+        <div class="card"><div class="c-tag">Example</div><h4>Making the science legible</h4><p>The warming-stripes approach behind the 661% #StateOfClimate rise — dense data turned into a graphic that stops the scroll.</p><a class="card-link" href="https://www.linkedin.com/posts/climateaction-share-7283456792716574720-1kF3/" target="_blank" rel="noopener">View the post on LinkedIn →</a></div>
       </div>
     </article>
 
     <!-- 02 -->
     <article class="case reveal">
       <div class="case-head"><span class="case-num">02</span><h3>From Broadcast to Predictive Community</h3></div>
-      <div class="case-cap">Community strategy · Social intelligence · Predictive posture</div>
-      <p>The era of the one-way broadcast is over. The organizations that win now are the ones that listen, learn, and respond in real time — treating social not as a megaphone but as a living, two-way intelligence system. We led exactly that transition at WMO, and the data proved it worked.</p>
-      <p>We moved from a Broadcast Model to a Community Model, and the signal was unmistakable: a 600% increase in inbound messages, with engagement growth (+117.7%) dramatically outpacing impression growth (+94.1%). Content was no longer just being served by algorithms; it was stopping the scroll and triggering dialogue. The next frontier, whose groundwork we architected, is predictive — turning social listening into an early-warning system for emerging narratives, competitive moves, and reputational risk, surfaced in minutes, not weeks.</p>
+      <div class="case-cap">Community strategy · Social intelligence · ROI discipline</div>
+      <p>The era of the one-way broadcast is over. We led WMO's transition from a Broadcast Model to a Community Model, and the data proved it: a 600% increase in inbound messages, with engagement growth (+117.7%) dramatically outpacing impression growth (+94.1%). The groundwork we architected points to the next frontier — social listening as a predictive early-warning system for emerging narratives and reputational risk.</p>
+      <p>We also put a number on the function itself, valuing the channel portfolio at approximately $6.4 million USD using standard CPA, CPC, and CPM benchmarks — the market replacement cost of the audience and reach. Communication defended in the language executives actually use: assets and return.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Result</div><h4>600% more inbound dialogue</h4><p>Inbound messages rose ~600% shifting from broadcast to community — engagement growth (+117.7%) outpaced impression growth (+94.1%).</p></div>
-        <div class="card"><div class="c-tag">Capability</div><h4>Listening → predictive intelligence</h4><p>Built the foundation to convert social listening into a predictive function — surfacing narratives, sentiment shifts, and risk in real time rather than hindsight.</p></div>
+        <div class="card"><div class="c-tag">Result</div><h4>600% more inbound dialogue</h4><p>Engagement growth outpaced impressions — proof content was triggering interaction, not just views.</p></div>
+        <div class="card"><div class="c-tag">Valuation</div><h4>~$6.4M owned digital asset</h4><p>The channel portfolio valued at market replacement cost — reframing communication from cost center to owned asset.</p></div>
       </div>
     </article>
 
@@ -333,134 +336,95 @@
     <article class="case reveal">
       <div class="case-head"><span class="case-num">03</span><h3>Creating a New Conversation</h3></div>
       <div class="case-cap">Narrative strategy · Category creation · Multi-agency orchestration</div>
-      <p>When we took on Early Warnings for All — the UN mandate to protect every person on Earth with early warning systems by 2027 — online conversation about the topic was effectively zero. Run a boolean search before we began, and you found near silence. We didn't ride a trend; we built a category. Within a year, mentions had grown more than tenfold, from 7.5 million to 80 million. That figure is not a growth rate — it is the measure of a conversation that did not exist before we built it.</p>
-      <p>Building it required a hard narrative choice. Doom-and-gloom framing does not move governments, especially when multilateralism is cracking under pressure. We anchored the initiative to something undeniable: resilience and security — reframing early warnings from a humanitarian sunk cost into a sovereign investment, reaching inward-looking governments through the language of national security and adaptation they already cared about. The research backs this precisely: a security frame consistently outperforms a distant climate frame in driving real support. We led WMO's communications across the multi-agency task force with IFRC, UNDRR, and ITU, building the messaging framework, visual identity, and media assets that aligned massive agencies behind a single voice.</p>
+      <p>When we took on Early Warnings for All — the UN mandate to protect every person on Earth with early warning systems by 2027 — online conversation about the topic was effectively zero. We didn't ride a trend; we built a category. Within a year, mentions grew more than tenfold, from 7.5 million to 80 million.</p>
+      <p>It required a hard narrative choice. Doom does not move governments, especially with multilateralism under pressure — so we anchored the initiative to resilience and security, reframing early warnings from humanitarian sunk cost into sovereign investment. We led communications across the multi-agency task force with IFRC, UNDRR, and ITU, aligning massive agencies behind a single voice.</p>
       <div class="cards one">
-        <div class="card"><div class="c-tag">Campaign</div><h4>Early Warnings for All — building a category</h4><p>Created a new public conversation from near-zero. Built the messaging framework, asset library, and partner coordination for a unified global launch.</p><a class="card-link" href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank" rel="noopener">View campaign assets on Trello →</a></div>
+        <div class="card"><div class="c-tag">Campaign</div><h4>Early Warnings for All — building a category</h4><p>Messaging framework, asset library, and partner coordination for a unified global launch.</p><a class="card-link" href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank" rel="noopener">View campaign assets on Trello →</a></div>
       </div>
       <div class="video-grid">
         <div>
-          <div class="video-frame"><iframe src="https://www.youtube.com/embed/35FvB7lst6o" title="Early Warnings for All hero video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div class="video-frame" data-yt="35FvB7lst6o" role="button" tabindex="0" aria-label="Play video: Early Warnings for All hero video"><img class="poster" src="https://img.youtube.com/vi/35FvB7lst6o/hqdefault.jpg" alt="Early Warnings for All hero video" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
           <p class="video-caption">The campaign hero video — anchoring early warnings to resilience and security.</p>
         </div>
         <div>
-          <div class="video-frame"><iframe src="https://www.youtube.com/embed/ZNY24cMkuh0" title="Early Warnings for All interview series" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-          <p class="video-caption">Interviews bringing early warning systems to life on the ground — including in Spanish.</p>
+          <div class="video-frame" data-yt="ZNY24cMkuh0" role="button" tabindex="0" aria-label="Play video: Early Warnings for All interview series"><img class="poster" src="https://img.youtube.com/vi/ZNY24cMkuh0/hqdefault.jpg" alt="Early Warnings for All interview series" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+          <p class="video-caption">Interviews bringing early warnings to life on the ground — including in Spanish.</p>
         </div>
       </div>
     </article>
 
     <!-- 04 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">04</span><h3>Communication as an Owned Asset</h3></div>
-      <div class="case-cap">ROI discipline · Economic valuation · Executive reporting</div>
-      <p>Communication is too often treated as a cost center — a soft function that spends money and reports vanity metrics. We reject that framing. A social media portfolio is an owned digital asset with a real, defensible market value, and treating it that way changes every conversation with leadership.</p>
-      <p>We built the economic case at WMO using standard digital advertising benchmarks — Cost Per Acquisition, Cost Per Click, Cost Per Mille — to value the channel portfolio at approximately $6.4 million USD: the market replacement cost to rebuild that audience, traffic, and reach through paid media. This is the discipline a modern communication function demands — a clear return for every dollar spent, defended in the language executives actually use.</p>
+      <div class="case-head"><span class="case-num">04</span><h3>Award-Winning AI Product</h3></div>
+      <div class="case-cap">AI product launch · Frontier-tech storytelling · Information integrity</div>
+      <p>Disinformation thrives in a vacuum; AskWMO was built to fill it. The tool harnesses AI to pry open WMO's foundational databases, making dense climate and weather data instantly accessible — defending authoritative knowledge exactly where trust is eroding fastest.</p>
+      <p>For this work, the founder was one of four named recipients of the 2024 Royal Meteorological Society Award for Impact on Science, Policy or Society — leading the digital communication strategy and launch narrative that positioned a frontier-tech tool to reinforce scientific authority rather than degrade it.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Valuation</div><h4>~$6.4M owned digital asset</h4><p>Valued WMO's channel portfolio at ~$6.4M USD using CPA, CPC, and CPM benchmarks — the replacement cost to rebuild it through paid media.</p></div>
-        <div class="card"><div class="c-tag">Mindset</div><h4>Return for every dollar</h4><p>Reframed communication from cost center to owned asset — giving leadership a defensible, finance-literate basis for investment decisions.</p></div>
+        <div class="card"><div class="c-tag">Award</div><h4>Royal Meteorological Society Award 2024</h4><p>AskWMO won the RMS Award for Impact on Science, Policy or Society.</p><a class="card-link" href="https://www.rmets.org/rmets-awards/2024-winners/awards-impact-science-policy-or-society-2024" target="_blank" rel="noopener">View the award citation →</a></div>
+        <div class="card"><div class="c-tag">Recognition</div><h4>RMS 2024 winners announcement</h4><p>Recognized among AI-driven solutions enhancing access to authoritative climate information.</p><a class="card-link" href="https://www.rmets.org/news/royal-meteorological-society-announces-2024-award-winners-landmark-anniversary-year" target="_blank" rel="noopener">Read the announcement →</a></div>
       </div>
     </article>
 
     <!-- 05 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">05</span><h3>Award-Winning AI Product</h3></div>
-      <div class="case-cap">AI product launch · Frontier-tech storytelling · Information integrity</div>
-      <p>Disinformation thrives in a vacuum. AskWMO was built to fill it. In an era where trust is eroding, defending authoritative knowledge is the most urgent work communicators can do. AskWMO harnesses AI to pry open WMO's foundational databases, making dense climate and weather data instantly accessible and actionable.</p>
-      <p>For this work, the founder was one of four named recipients of the 2024 Royal Meteorological Society Award for Impact on Science, Policy or Society — leading the digital communication strategy and the launch narrative, positioning a frontier-tech tool in a way that reinforced scientific authority rather than degrading it. You have to take something genuinely new and make its value undeniable to a global audience.</p>
+      <div class="case-head"><span class="case-num">05</span><h3>AI-Native Practice: Answer Engines &amp; Agentic Systems</h3></div>
+      <div class="case-cap">GEO / AEO · Applied AI · The AI content supply chain</div>
+      <p>The audience is no longer only human. Increasingly, answers come from AI chatbots — and an institution absent from the sources those models draw on is invisible at the moment of decision. Primo has built a complete GEO/AEO framework for this reality: content engineered for machine extraction, mapped to the off-site sources that actually feed the models, across Western and Chinese AI ecosystems alike. AskWMO was the early instinct; the framework is the developed method, ready to deploy.</p>
+      <p>And we build, not just advise. The founder architected an autonomous AI agent producing a daily strategic intelligence brief — defined voice, scheduled pipeline, strict budget — and is developing an AI content supply chain: one source of truth fanned into platform-native, GEO-optimized assets, with a human always in the loop for judgment.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Award</div><h4>Royal Meteorological Society Award 2024</h4><p>AskWMO won the RMS Award for Impact on Science, Policy or Society. Led the digital communication strategy and launch narrative.</p><a class="card-link" href="https://www.rmets.org/rmets-awards/2024-winners/awards-impact-science-policy-or-society-2024" target="_blank" rel="noopener">View the award citation →</a></div>
-        <div class="card"><div class="c-tag">Recognition</div><h4>RMS 2024 winners announcement</h4><p>Announced in the Royal Meteorological Society's landmark anniversary year, recognizing AI-driven solutions that enhance access to authoritative climate information.</p><a class="card-link" href="https://www.rmets.org/news/royal-meteorological-society-announces-2024-award-winners-landmark-anniversary-year" target="_blank" rel="noopener">Read the announcement →</a></div>
+        <div class="card"><div class="c-tag">Framework</div><h4>A complete GEO/AEO strategy</h4><p>Becoming a cited source in LLMs — machine-extractable content plus the off-site source map that feeds the models.</p></div>
+        <div class="card"><div class="c-tag">Applied AI</div><h4>Agentic systems, running daily</h4><p>An autonomous intelligence-brief agent in production, and a human-in-the-loop content supply chain in development.</p></div>
       </div>
     </article>
 
     <!-- 06 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">06</span><h3>Engineering for the Answer Engine</h3></div>
-      <div class="case-cap">GEO / AEO · LLM-source strategy · The next search frontier</div>
-      <p>The audience is no longer only human. Increasingly, people get their answers from AI chatbots — and if an institution is not present in the sources those models draw from, it is invisible at the exact moment of decision. Generative and Answer Engine Optimization (GEO/AEO) are the disciplines of becoming a cited source inside ChatGPT, Copilot, Gemini, Grok, and their Chinese counterparts. This is where search is going, and most communication functions have not started.</p>
-      <p>Primo has built a full GEO/AEO framework for this new reality — content engineered for machine extraction (definition-led architecture, self-contained answer blocks, structured data, authoritative citation) mapped to the off-site source strategy that actually feeds these models: Reddit and Quora for sentiment, LinkedIn for professional recognition via Copilot, X for real-time signal, and the distinct Chinese ecosystem (Zhihu, Baidu Baike, WeChat) that trains Ernie, Kimi, and Qwen. The instinct is not new — AskWMO was, in effect, an early answer-engine play. The framework is developed and ready to deploy at scale.</p>
+      <div class="case-head"><span class="case-num">06</span><h3>Building Capability That Stays</h3></div>
+      <div class="case-cap">Training · Playbooks · Coaching &amp; enablement</div>
+      <p>The highest form of communication leadership is making an organization capable of doing the work without you. Primo treats capacity building as a core service — training teams, writing the playbooks, coaching until the skill is theirs. The approach comes from the basketball court: lift everyone, build on strengths, never the same mistake twice, then let people shine.</p>
+      <p>It is proven at every scale: 30+ Forest Stewardship Council regional hubs trained to run their own communications; a WMO content operation scaled across 30+ focal points with a Federated Model granting regional posting authority within central standards. Capacity, not dependency.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Framework</div><h4>A complete GEO/AEO strategy</h4><p>A developed framework for becoming a cited source in LLMs — content engineered for machine extraction, plus an off-site source strategy spanning Western and Chinese AI ecosystems.</p></div>
-        <div class="card"><div class="c-tag">Origin</div><h4>Answer-engine instinct, proven early</h4><p>AskWMO was an early AEO play in practice — ensuring authoritative climate knowledge surfaced inside AI tools before "GEO" was a named discipline.</p></div>
+        <div class="card"><div class="c-tag">Training</div><h4>30+ FSC regional hubs</h4><p>Independent communications capability built across a global network.</p></div>
+        <div class="card"><div class="c-tag">Enablement</div><h4>30+ focal points &amp; a Federated Model</h4><p>Templates, coaching, and a hub-and-spoke model with regional posting authority.</p></div>
       </div>
     </article>
 
     <!-- 07 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">07</span><h3>Building With Frontier AI</h3></div>
-      <div class="case-cap">Applied AI · Agentic workflows · The AI content supply chain</div>
-      <p>A communication practice that only talks about AI is already obsolete. We build with it. The founder architected a custom AI agent that runs autonomously every morning — scraping global hazards, geopolitical shifts, and market movements, synthesizing them through a strategic lens, and drafting a daily intelligence brief in a defined voice, on a scheduled pipeline, strictly under budget.</p>
-      <p>That same architecture scales into something larger: an AI content supply chain. We don't just adopt tools — we build the systems behind them, and that hands-on friction is the only way to lead AI-powered communication with real credibility. The concept in development is a modular pipeline that takes a single source of truth — a report, a benchmark, a launch — and fans it out into platform-native, GEO-optimized assets at velocity, with a human always in the loop for judgment and brand safety.</p>
+      <div class="case-head"><span class="case-num">07</span><h3>Crisis Communication &amp; Knowledge Infrastructure</h3></div>
+      <div class="case-cap">C4D · Behavior change · Organizational learning</div>
+      <p>When COVID-19 emptied schools across China, the problem wasn't distributing information — it was changing behavior in a moment of panic. At UNICEF China, we led the Safe School Return campaign, a C4D framework built to replace parental fear with clarity. It won an award; more importantly, its assets were replicated by UNICEF offices far beyond China. A model that travels.</p>
+      <p>A crisis also generates lessons faster than any organization can absorb them. We built the pipes to catch that knowledge — the SharePoint architecture capturing real-time lessons from the field, connecting UNICEF's 190 country offices, recognized with a UNICEF Inspira Award. Crisis infrastructure, not just editorial.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Applied AI</div><h4>Autonomous morning intelligence brief</h4><p>An AI agent on an automated pipeline synthesizing hazards, geopolitics, and markets into a daily brief — hands-on fluency with agentic AI, not just tool adoption.</p></div>
-        <div class="card"><div class="c-tag">In Progress</div><h4>AI content supply chain (concept build)</h4><p>A modular pipeline turning one source of truth into platform-native, GEO-optimized assets at velocity — human-in-the-loop for judgment.</p></div>
+        <div class="card"><div class="c-tag">Communication for Development</div><h4>Safe School Return — UNICEF China</h4><p>Award-recognized behavior-change campaign, with assets built to scale globally.</p><a class="card-link" href="https://www.unicef.cn/en/covid-19/safe-school-return" target="_blank" rel="noopener">View the campaign →</a></div>
+        <div class="card"><div class="c-tag">Award · Inspira</div><h4>Knowledge across 190 country offices</h4><p>COVID-19 lessons-learned infrastructure turning emergency chaos into a permanent, searchable asset.</p></div>
       </div>
     </article>
 
     <!-- 08 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">08</span><h3>Building Capability That Stays</h3></div>
-      <div class="case-cap">Training · Playbooks · Coaching &amp; enablement</div>
-      <p>The highest form of communication leadership is not doing the work yourself — it is making an organization capable of doing it without you. Primo treats capacity building as a core service: training teams, writing the playbooks, and coaching people until the skill is theirs. The approach is the one taken to the basketball court — lift everyone, build on individual strengths, never let the same mistake happen twice, then get out of the way and let people shine.</p>
-      <p>This is proven across three organizations and every level of scale. At the Forest Stewardship Council, we trained more than 30 regional hubs to run their own communications. At WMO, we scaled a content operation across 30+ focal points — giving non-specialists the templates and guidance to produce on-brand work independently — and championed a Federated Model granting regional teams direct posting authority within clear central standards. At UNICEF, we built the knowledge infrastructure connecting 190 country offices. The through-line: build capacity, not dependency.</p>
+      <div class="case-head"><span class="case-num">08</span><h3>Flagship Report Launch</h3></div>
+      <div class="case-cap">Editorial authority · Launch craft · Translating science</div>
+      <p>A technical report is useless if it dies on a PDF. For WMO's State of Climate Services 2023: Health, we refused to just push data — we produced WMO's first-ever video case study, pulling a single data point on heatwaves and putting a camera on outdoor workers in Greece to show what that data feels like on the ground.</p>
+      <p>No single format carries every story. We partner with technical institutions and creatives alike — tapping the European Space Agency for Earth observation imagery and bringing satellite data to life for recurring flagship moments. Content engineered not just to inform, but to inspire.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Training</div><h4>30+ FSC regional hubs</h4><p>Trained more than 30 Forest Stewardship Council regional hubs to run their own communications — independent capability across a global network.</p></div>
-        <div class="card"><div class="c-tag">Enablement</div><h4>30+ focal points &amp; a Federated Model</h4><p>Scaled WMO's content operation across 30+ focal points with templates and coaching, and designed a hub-and-spoke model with regional posting authority.</p></div>
+        <div class="card"><div class="c-tag">Report</div><h4>State of Climate Services 2023: Health</h4><p>WMO's first video case study — abstract heatwave data made human.</p><a class="card-link" href="https://wmo.int/resources/publication-series/state-of-climate-services/2023-state-of-climate-services-health" target="_blank" rel="noopener">View the report →</a></div>
+        <div class="card"><div class="c-tag">Partnership</div><h4>Bringing satellite data to life</h4><p>ESA Earth observation imagery transformed with experts and creatives into content that inspires.</p><a class="card-link" href="https://www.facebook.com/reel/2866239786891608" target="_blank" rel="noopener">Watch on Facebook →</a></div>
       </div>
-      <div class="cards one">
-        <div class="card"><div class="c-tag">Infrastructure</div><h4>Knowledge capability across 190 country offices</h4><p>Built the UNICEF knowledge infrastructure connecting 190 country offices (Inspira Award) — turning one team's hard-won lessons into a capability the entire organization could draw on.</p></div>
+      <div class="video-single">
+        <div class="video-frame" data-yt="LTnXvG8FXRk" role="button" tabindex="0" aria-label="Play video: WMO State of Climate Services Health video case study"><img class="poster" src="https://img.youtube.com/vi/LTnXvG8FXRk/hqdefault.jpg" alt="WMO State of Climate Services Health video case study" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+        <p class="video-caption">Story collecting in the field — the report's heatwave data as the lived reality of outdoor workers in Greece.</p>
       </div>
     </article>
 
     <!-- 09 -->
     <article class="case reveal">
-      <div class="case-head"><span class="case-num">09</span><h3>Communication for Development in Crisis</h3></div>
-      <div class="case-cap">C4D · Behavior-change communication · Scalable assets</div>
-      <p>When COVID-19 emptied schools across China, the problem wasn't just distributing information. It was changing behavior in a moment of sheer panic. At UNICEF China, we led the Safe School Return campaign — a Communication for Development framework designed to replace parental fear with clarity, guiding families safely back to in-person learning.</p>
-      <p>The true measure of the work was its replicability. The campaign won an award, but more importantly, the assets were structurally sound enough to be adapted and deployed by UNICEF offices in countries far beyond China's borders. That is what development communication should be: a model that travels.</p>
-      <div class="cards one">
-        <div class="card"><div class="c-tag">Communication for Development</div><h4>Safe School Return — UNICEF China</h4><p>Led the communication guiding families back to in-person learning during COVID-19. Award-recognized, with assets built to scale globally.</p><a class="card-link" href="https://www.unicef.cn/en/covid-19/safe-school-return" target="_blank" rel="noopener">View the campaign →</a></div>
-      </div>
-    </article>
-
-    <!-- 10 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">10</span><h3>Knowledge Management Under Pressure</h3></div>
-      <div class="case-cap">Knowledge management · Information architecture · Organizational learning</div>
-      <p>A crisis generates lessons faster than any organization can absorb them. Unless you build the pipes to catch that knowledge, it evaporates the second the emergency ends. During the COVID-19 response at UNICEF China, we built the architecture to save it.</p>
-      <p>We designed the SharePoint systems that captured real-time lessons from the field, structuring them so teams could find and reuse them instantly. This wasn't just editorial work; it was crisis infrastructure. It won a UNICEF Inspira Award because it turned the chaos of an emergency response into a permanent, searchable asset.</p>
-      <div class="cards one">
-        <div class="card"><div class="c-tag">Award · Inspira</div><h4>COVID-19 knowledge management</h4><p>Built the SharePoint infrastructure to capture and disseminate organizational lessons learned during the COVID-19 response.</p></div>
-      </div>
-    </article>
-
-    <!-- 11 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">11</span><h3>Flagship Report Launch</h3></div>
-      <div class="case-cap">Editorial authority · Launch craft · Translating science</div>
-      <p>A technical report is useless if it dies on a PDF. For WMO's State of Climate Services 2023: Health report, we refused to just push data. We went after the human reality behind it.</p>
-      <p>We produced WMO's first-ever video case study — pulling a single data point on heatwaves, working with national partners, and putting a camera on outdoor workers in Greece to show exactly what that data feels like on the ground. That is the craft of a launch: forcing the science off the page and making it travel.</p>
-      <p>But no single format carries every story, and the real power is in mixing it up. We partner with major technical institutions and creatives alike — tapping organizations like the European Space Agency for Earth observation imagery, then working with experts and designers to bring those satellite images to life. For recurring flagship moments, that means content engineered not just to inform, but to inspire.</p>
+      <div class="case-head"><span class="case-num">09</span><h3>Thought Leadership</h3></div>
+      <div class="case-cap">Intellectual authority · Public writing</div>
+      <p>A strategic communication practice has to be a voice in the room. We publish at the intersection of communication, AI, and Earth system science — from the MeteoWorld series that positioned WMO at the AI frontier to current writing on Generative Engine Optimization, the discipline of making content legible to the AI systems that increasingly mediate every answer.</p>
       <div class="cards">
-        <div class="card"><div class="c-tag">Report</div><h4>State of Climate Services 2023: Health</h4><p>Produced WMO's first video case study, turning abstract heatwave data into the lived reality of outdoor workers in Greece.</p><a class="card-link" href="https://wmo.int/resources/publication-series/state-of-climate-services/2023-state-of-climate-services-health" target="_blank" rel="noopener">View the report →</a></div>
-        <div class="card"><div class="c-tag">Partnership</div><h4>Bringing satellite data to life</h4><p>Partnered with the European Space Agency and creative collaborators to transform Earth observation imagery into inspiring content — raw orbital data made human.</p><a class="card-link" href="https://www.facebook.com/reel/2866239786891608" target="_blank" rel="noopener">Watch on Facebook →</a></div>
-      </div>
-      <div class="video-single">
-        <div class="video-frame"><iframe src="https://www.youtube.com/embed/LTnXvG8FXRk" title="WMO State of Climate Services Health video case study" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <p class="video-caption">Story collecting in the field — turning the report's heatwave data into the lived reality of outdoor workers in Greece.</p>
-      </div>
-    </article>
-
-    <!-- 12 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">12</span><h3>Thought Leadership</h3></div>
-      <div class="case-cap">Intellectual authority · Public writing · Shaping the conversation</div>
-      <p>A strategic communication practice has to be a voice in the room, not just a technician in the background. We write and publish at the intersection of communication, AI, and Earth system science — staking a claim on the exact questions global organizations are struggling with.</p>
-      <p>The founder authored a series of articles on artificial intelligence for MeteoWorld, directly contributing to WMO's positioning as an authority in a rapidly moving space — and now publishes on Generative Engine Optimization, the discipline of making content legible to the AI systems that increasingly mediate every answer.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Article</div><h4>Can AI Language Models Bridge the Earth System Knowledge Gap?</h4><p>Published analysis on the potential and limits of AI language models in making complex science accessible — the intellectual foundation behind AskWMO.</p><a class="card-link" href="https://wmo.int/media/magazine-article/can-artificial-intelligence-language-models-bridge-earth-system-knowledge-gap" target="_blank" rel="noopener">Read the article →</a></div>
-        <div class="card"><div class="c-tag">Article</div><h4>Advancing Earth System Science with AI</h4><p>Published thought leadership on how AI is reshaping Earth system science and how authoritative climate knowledge is produced and shared.</p><a class="card-link" href="https://wmo.int/media/magazine-article/advancing-earth-system-science-artificial-intelligence" target="_blank" rel="noopener">Read the article →</a></div>
+        <div class="card"><div class="c-tag">Article</div><h4>Can AI Language Models Bridge the Earth System Knowledge Gap?</h4><p>The intellectual foundation behind AskWMO.</p><a class="card-link" href="https://wmo.int/media/magazine-article/can-artificial-intelligence-language-models-bridge-earth-system-knowledge-gap" target="_blank" rel="noopener">Read the article →</a></div>
+        <div class="card"><div class="c-tag">Article</div><h4>Advancing Earth System Science with AI</h4><p>How AI is reshaping the production and sharing of authoritative climate knowledge.</p><a class="card-link" href="https://wmo.int/media/magazine-article/advancing-earth-system-science-artificial-intelligence" target="_blank" rel="noopener">Read the article →</a></div>
       </div>
     </article>
 
@@ -481,14 +445,14 @@
           WMO · UNICEF · FSC · ITU<br>
           Tsinghua University<br>
           English · Spanish<br>
-          Based in Hainan, China
+          Operating globally across multilateral ecosystems
         </div>
       </div>
       <div class="principal-body reveal">
         <h2>A scholar-practitioner behind every engagement.</h2>
-        <p>Primo is led by Jesse Cruz, who came to this work as a student of it and has never stopped. His intellectual life circles one question: <span class="w">how power communicates.</span> It began with a bachelor's in Politics and History and deepened through master's research at Tsinghua University — analyzing how international organizations build sustainability standards, and how the Chinese government communicates its foreign policy.</p>
-        <p>That research instinct is matched by fifteen years of practice at the highest level of the multilateral system: deputy to the Head of Strategic Communication at the World Meteorological Organization, and senior roles at UNICEF China and the Forest Stewardship Council. The thread is always the same — figuring out not just how political communication happens, but why it works, and what it reveals about the institutions holding the microphone.</p>
-        <p>He backs it with a diploma in Communication for Development (C4D) and a UN Emerging Leaders certificate. <span class="w">The best practitioners are perpetual students</span> — and every Primo engagement carries both the rigor of research and the discipline of continuous learning.</p>
+        <p>Primo is led by Jesse Cruz, who came to this work as a student of it and has never stopped. His intellectual life circles one question: <span class="w">how power communicates.</span> It began with a bachelor's in Politics and History and deepened through master's research at Tsinghua University — analyzing how international organizations build sustainability standards and execute complex diplomatic narratives.</p>
+        <p>That research instinct is matched by fifteen years of practice at the highest level of the multilateral system: deputy to the Head of Strategic Communication at the World Meteorological Organization, and senior roles at UNICEF China and the Forest Stewardship Council. The thread is always the same — engineering the architecture of political communication, understanding why it works, and deploying it to secure institutional mandates.</p>
+        <p>He backs it with continuous, chartered-level professional development: CIPR-certified in PR strategy and campaign management (Chartered Institute of Public Relations); European Policy Communications in the Digital Era (CEPOW, Madrid); UNITAR's Diplomacy 4.0 — AI, cyberdiplomacy, and internet governance; the UN Emerging Leaders programme and the UNSSC/IE mentorship programme (IE School of Politics, Economics &amp; Global Affairs); and a Communication for Development (C4D) foundation extended through behavioral-communication training with NYU, WHO, and UNICEF. <span class="w">The best practitioners are perpetual students</span> — and every Primo engagement carries both the rigorous objectivity of research and the technical discipline of modern, AI-powered execution.</p>
       </div>
     </div>
   </div>
@@ -500,8 +464,7 @@
     <h2>Let's build meaning that moves.</h2>
     <p>Whether it's sharper positioning, a standing editorial capacity, or AI-native workflows built for your mandate — Primo is ready. Tell us what your institution needs to be understood.</p>
     <div class="contact-actions">
-      <a class="btn-dark" href="mailto:hello@primostrategic.com">Start a conversation</a>
-      <a class="btn-ghost" href="https://primostrategic.com" target="_blank" rel="noopener">primostrategic.com</a>
+      <a class="btn-dark" href="mailto:primo.communication.io@gmail.com">Start a conversation</a>
     </div>
   </div>
 </section>
@@ -520,6 +483,22 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+  // Lite YouTube embeds: swap poster for player on click
+  document.querySelectorAll('.video-frame[data-yt]').forEach(el => {
+    const play = () => {
+      const id = el.dataset.yt;
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.title = el.getAttribute('aria-label') || 'Video';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      el.innerHTML = ''; el.appendChild(f); el.removeAttribute('role'); el.style.cursor = 'default';
+    };
+    el.addEventListener('click', play);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
+  });
 
   // Close mobile menu on link tap
   document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
