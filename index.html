@@ -3,492 +3,555 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Primo Strategic Communication — Meaning that moves institutions</title>
-<meta name="description" content="Primo helps multilateral organizations and INGOs turn policy ambition into recognized legitimacy — combining strategic communication craft with AI-powered workflows.">
+<title>Primo Strategic Communication · Meaning that moves institutions</title>
+<meta name="description" content="Primo Strategic Communication. Jesse Cruz: fifteen years of strategic communication inside the UN system, UNICEF, and the Forest Stewardship Council. Strategy, campaigns, editorial, and measurement for multilateral organizations and INGOs.">
+<meta property="og:title" content="Primo Strategic Communication">
+<meta property="og:description" content="Fifteen years of strategic communication inside the UN system. Strategy, campaigns, editorial, and measurement for multilateral organizations and INGOs.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/primo-mark-green.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Primo Strategic Communication LLC",
+  "slogan": "Meaning that moves institutions.",
+  "email": "primo.communication.io@gmail.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Jesse Cruz",
+    "jobTitle": "Principal",
+    "knowsLanguage": ["en", "es"]
+  }
+}
+</script>
 <style>
+  /* ══ Primo System C tokens — generated values from tokens.json ══ */
   :root{
     --ink:#1A1B2E;
-    --green:#12B981;        /* Signal Green — accent on DARK bg */
-    --green-deep:#0A6B4B;   /* Signal Green Deep — accent on LIGHT bg (mandatory) */
+    --surface:#2C2F3F;      /* raised surface on ink; secondary text on light */
+    --green:#12B981;        /* Signal Green — focal numbers, hairlines, logomark. DARK grounds. */
+    --green-deep:#0A6B4B;   /* the accent for LIGHT grounds */
     --parchment:#EFE1CC;
-    --mist:#B1B1B1;
+    --muted:#B1B1B1;        /* dark grounds only */
     --paper:#FFFFFF;
-    --line:#e6e6e6;
-    --line-soft:#ededed;
-    --line-dark:#10111D;
-    --body:#4a4a4a;
-    --muted:#7a7a7a;
-    --muted-2:#9a9a9a;
+    /* Fibonacci space ramp */
+    --s-xs:8px; --s-sm:13px; --s-md:21px; --s-lg:34px; --s-xl:55px; --s-2xl:89px; --s-3xl:144px;
     --maxw:1120px;
+    --mono:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
   }
-
-  body::before{content:"";position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;background-image:url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.04"/%3E%3C/svg%3E');}
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
     font-family:'Roboto',sans-serif;
+    font-size:21px;line-height:1.619;   /* body token */
     color:var(--ink);
     background:var(--paper);
     -webkit-font-smoothing:antialiased;
-    line-height:1.65;
   }
   a{color:inherit;text-decoration:none;}
+  img{max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);}
 
-  /* ── M-MARK LOCKUP ── */
-  .lockup{display:inline-flex;align-items:flex-end;font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:-0.005em;line-height:0.78;white-space:nowrap;}
-  .lockup .mark{height:0.7em;width:auto;display:block;margin:0 0.015em 0.045em 0.03em;overflow:visible;}
-  .lockup.icon-only .mark{height:1em;margin:0;}
-  .lockup-wrap{display:inline-block;line-height:1;}
-  .descriptor{display:flex;justify-content:space-between;width:100%;font-family:'Montserrat',sans-serif;font-weight:300;font-size:0.20em;line-height:1;margin-top:0.66em;}
-  .descriptor span{flex:1 1 0;text-align:center;}
+  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 var(--s-lg);}
+  h3{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;line-height:1.25;margin:0;}
+  .cap{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;line-height:1.615;letter-spacing:0.14em;text-transform:uppercase;}
+  p{margin:0 0 var(--s-md);max-width:66ch;}
+  p:last-child{margin-bottom:0;}
 
-  /* ── NAV ── */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,15,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark);}
-  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 32px;height:66px;display:flex;align-items:center;justify-content:space-between;}
-  .nav .lockup{font-size:26px;color:#fff;}
-  .nav-links{display:flex;align-items:center;gap:30px;}
-  .nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist);transition:color .2s;}
-  .nav-links a:hover{color:#fff;}
-  .nav-cta{font-family:'Montserrat',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink)!important;background:var(--green);padding:9px 18px;border-radius:999px;transition:transform .2s;}
-  .nav-cta:hover{transform:translateY(-1px);}
+  /* ══ NAV ══ */
+  .nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid var(--surface);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);height:68px;display:flex;align-items:center;justify-content:space-between;}
+  .nav img{height:28px;display:block;}
+  .nav-links{display:flex;align-items:center;gap:var(--s-lg);}
+  .nav-links a{color:var(--muted);transition:color .2s;}
+  .nav-links a.cap:hover{color:var(--paper);}
+  .nav-cta{border:1px solid var(--paper);color:var(--paper)!important;padding:9px 21px;border-radius:2px;}
+  .nav-cta:hover{background:var(--paper);color:var(--ink)!important;}
   .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
-  @media(max-width:820px){
+  @media(max-width:860px){
     .nav-links{display:none;}
     .nav-toggle{display:block;}
-    .nav-links.open{display:flex;position:absolute;top:66px;left:0;right:0;background:var(--ink);flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid var(--line-dark);}
-    .nav-links.open a{padding:14px 32px;}
-    .nav-links.open .nav-cta{margin:10px 32px;text-align:center;}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;gap:0;padding:var(--s-sm) 0;border-bottom:1px solid var(--surface);}
+    .nav-links.open a{padding:var(--s-sm) var(--s-lg);}
   }
 
-  /* ── SHARED LAYOUT ── */
-  .band{padding:96px 32px;}
-  .band-inner{max-width:var(--maxw);margin:0 auto;}
-  .band.dark{background:var(--ink);color:#fff;}
-  .band.tight{padding:72px 32px;}
+  /* ══ HERO ══ */
+  .hero{background:var(--ink);color:var(--paper);padding:var(--s-2xl) 0;}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--s-2xl);}
+  .hero-top .cap{color:var(--muted);}
+  .hero-meta{text-align:right;color:var(--muted);}
+  .hero-lockup img{width:min(560px,80vw);display:block;margin-bottom:var(--s-xl);}
+  .hero-rule{width:var(--s-2xl);height:2px;background:var(--green);margin-bottom:var(--s-lg);}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:89px;line-height:1.1;letter-spacing:-0.015em;margin:0;max-width:11em;}
+  @media(max-width:860px){.hero h1{font-size:55px;}.hero-meta{display:none;}}
+  @media(max-width:560px){.hero h1{font-size:34px;}}
 
-  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.32em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
-  .eyebrow .sq{width:9px;height:9px;background:var(--green-deep);display:inline-block;}
-  .dark .eyebrow .sq{background:var(--green);}
-  .dark .eyebrow{color:var(--mist);}
+  /* ══ BANDS ══ */
+  .band{padding:var(--s-2xl) 0;}
+  .band.dark{background:var(--ink);color:var(--paper);}
+  .band.parchment{background:var(--parchment);}
+  .eyebrow{color:var(--green-deep);margin-bottom:var(--s-lg);display:block;}
+  .dark .eyebrow{color:var(--green);}
+  .band .lede{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;line-height:1.25;max-width:24em;margin:0 0 var(--s-md);}
+  .body-2{color:var(--surface);}
+  .dark .body-2{color:var(--muted);}
 
-  /* ── HERO ── */
-  .hero{background:var(--ink);color:#fff;padding:104px 32px 108px;position:relative;overflow:hidden;}
-  .hero-inner{max-width:var(--maxw);margin:0 auto;position:relative;z-index:1;}
-  .hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:76px;}
-  .hero-eyebrow{display:flex;align-items:center;gap:11px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.32em;color:var(--mist);}
-  .hero-eyebrow .sq{width:9px;height:9px;background:var(--green);display:inline-block;}
-  .hero-meta{text-align:right;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.18em;color:var(--mist);line-height:1.9;}
-  .hero-lockup{font-size:104px;margin-bottom:60px;}
-  .hero-lockup .lockup{color:#fff;}
-  .hero-tagline{max-width:820px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.01em;margin:0;}
-  .hero-tagline .accent{color:var(--green);}
-  .hero-ghost{position:absolute;right:-120px;top:50%;transform:translateY(-50%);height:620px;opacity:0.06;z-index:0;}
-  @media(max-width:720px){
-    .hero-lockup{font-size:60px;}
-    .hero-tagline{font-size:30px;}
-    .hero-meta{display:none;}
+  /* ══ PHILOSOPHY PILLARS ══ */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-lg);border-top:1px solid var(--green);padding-top:var(--s-lg);margin-top:var(--s-xl);}
+  .pillar .cap:first-child{color:var(--green);display:block;margin-bottom:var(--s-sm);}
+  .pillar .p-title{font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;line-height:1.3;margin:0 0 var(--s-xs);}
+  .pillar p{font-size:13px;line-height:1.615;color:var(--muted);}
+  @media(max-width:860px){.pillars{grid-template-columns:1fr;}}
+
+  /* ══ SERVICES — rows, not cards ══ */
+  .svc{display:grid;grid-template-columns:var(--s-3xl) 1fr 2fr;gap:var(--s-lg);padding:var(--s-lg) 0;border-top:1px solid var(--green-deep);align-items:baseline;}
+  .svc:last-of-type{border-bottom:1px solid var(--green-deep);}
+  .svc .cap{color:var(--green-deep);}
+  .svc h3{font-size:21px;font-weight:600;font-family:'Montserrat',sans-serif;}
+  .svc p{font-size:13px;line-height:1.615;color:var(--surface);max-width:none;margin:0;}
+  @media(max-width:860px){.svc{grid-template-columns:1fr;gap:var(--s-xs);}}
+
+  /* ══ WORK / CASES ══ */
+  .case{display:grid;grid-template-columns:280px 1fr;gap:var(--s-xl);padding:var(--s-xl) 0;border-top:1px solid var(--green-deep);}
+  .case.full{grid-template-columns:1fr;}
+  .focal{font-family:'Montserrat',sans-serif;font-weight:800;font-size:89px;line-height:1.05;color:var(--green-deep);letter-spacing:-0.02em;}
+  .focal-label{display:block;color:var(--surface);margin-top:var(--s-xs);letter-spacing:0.14em;}
+  .case h3{margin-bottom:var(--s-xs);}
+  .case .case-cap{color:var(--surface);display:block;margin-bottom:var(--s-md);}
+  .ledger{font-family:var(--mono);font-size:13px;line-height:1.7;border-left:2px solid var(--green-deep);padding:var(--s-sm) var(--s-md);margin:var(--s-md) 0;color:var(--surface);}
+  .ledger b{color:var(--green-deep);font-weight:500;display:inline-block;min-width:8.5em;}
+  .ledger div{padding:2px 0;}
+  .case-links{margin-top:var(--s-sm);font-size:13px;}
+  .case-links a{color:var(--green-deep);font-weight:500;border-bottom:1px solid var(--green-deep);margin-right:var(--s-md);}
+  @media(max-width:860px){
+    .case{grid-template-columns:1fr;gap:var(--s-md);}
+    .focal{font-size:55px;}
   }
 
-  /* ── POSITIONING ── */
-  .lede{margin:0;max-width:1000px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:30px;line-height:1.42;letter-spacing:-0.005em;color:var(--ink);}
-  .lede .b{font-weight:600;}
-  .lede-sub{margin:21px 0 0;max-width:66ch;font-size:21px;line-height:1.619;color:var(--body);}
-  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;}
-  .pill{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.16em;color:var(--ink);}
-  .pill .dot{width:6px;height:6px;background:var(--green-deep);display:inline-block;}
-  @media(max-width:720px){.lede{font-size:23px;}}
-
-  /* ── PHILOSOPHY ── */
-  .philosophy-statement{margin:0 0 48px;max-width:940px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:24px;line-height:1.5;letter-spacing:-0.005em;color:#fff;}
-  .philosophy-statement .accent{color:var(--green);}
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid var(--line-dark);padding-top:38px;}
-  .pillar .p-num{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.24em;color:var(--green);margin-bottom:14px;}
-  .pillar .p-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.25;color:#fff;margin-bottom:12px;}
-  .pillar .p-desc{font-size:14px;line-height:1.62;color:var(--mist);}
-  @media(max-width:820px){.pillars{grid-template-columns:1fr;gap:34px;}}
-
-  /* ── SERVICES ── */
-  .svc-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:44px;}
-  .svc-head h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;line-height:1.25;letter-spacing:-0.01em;margin:0;max-width:560px;}
-  .svc-head p{margin:0;max-width:360px;font-size:15px;line-height:1.7;color:var(--body);}
-  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .svc{background:var(--paper);padding:38px 36px 40px;}
-  .svc .s-num{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.24em;color:var(--green-deep);margin-bottom:16px;}
-  .svc h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:21px;margin:0 0 12px;}
-  .svc p{margin:0;font-size:14.5px;line-height:1.66;color:var(--body);}
-  @media(max-width:720px){.svc-grid{grid-template-columns:1fr;}.svc-head h2{font-size:26px;}}
-
-  /* ── WORK ── */
-  .work-intro{max-width:820px;margin-bottom:8px;}
-  .work-intro .lede-sub{margin-top:18px;}
-  .case{padding:60px 0;border-top:1px solid var(--line);}
-  .case:first-of-type{border-top:1px solid var(--ink);}
-  .case-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;}
-  .case-num{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.22em;color:var(--green-deep);}
-  .case h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;line-height:1.25;letter-spacing:-0.01em;margin:0;}
-  .case-cap{font-family:'Montserrat',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin:10px 0 24px;}
-  .case p{font-size:21px;line-height:1.619;color:#1c1c22;margin:0 0 21px;max-width:66ch;}
-  .case p:last-of-type{margin-bottom:0;}
-
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;}
-  .cards.one{grid-template-columns:1fr;}
-  @media(max-width:640px){.cards{grid-template-columns:1fr;}}
-  .card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:24px;transition:border-color .2s,transform .2s;}
-  .card:hover{border-color:var(--green-deep);transform:translateY(-2px);}
-  .card .c-tag{font-family:'Montserrat',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px;}
-  .card h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;line-height:1.3;margin:0 0 8px;}
-  .card p{font-size:13.5px;line-height:1.6;color:var(--muted);margin:0;max-width:none;}
-  .card-link{display:inline-block;margin-top:14px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.04em;color:var(--ink);border-bottom:2px solid var(--green-deep);padding-bottom:1px;transition:color .2s;}
-  .card-link:hover{color:var(--green-deep);}
-
-  /* ── VIDEO ── */
-  .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px;}
-  .video-single{max-width:760px;margin-top:26px;}
+  /* video */
+  .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-md);margin-top:var(--s-md);}
+  .video-single{max-width:640px;margin-top:var(--s-md);}
   @media(max-width:720px){.video-grid{grid-template-columns:1fr;}}
-  .video-frame{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;background:var(--ink);box-shadow:0 12px 40px rgba(0,0,0,0.12);}
+  .video-frame{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--ink);cursor:pointer;}
   .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
-  .video-caption{font-size:13px;line-height:1.615;color:var(--muted);margin-top:8px;font-weight:400;}
-
-  .video-frame{cursor:pointer;}
   .video-frame img.poster{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;}
-  .video-frame .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s;}
-  .video-frame:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
-  .video-frame .play-btn::after{content:"";display:block;width:0;height:0;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent var(--ink);}
+  .video-frame .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55px;height:55px;border:2px solid var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(26,27,46,0.55);}
+  .video-frame .play-btn::after{content:"";display:block;width:0;height:0;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent var(--paper);margin-left:3px;}
+  .video-caption{font-size:13px;line-height:1.615;color:var(--surface);margin-top:var(--s-xs);}
+  .video-caption a{color:var(--green-deep);font-weight:500;}
 
-  /* ── PRINCIPAL ── */
-  .principal-grid{display:grid;grid-template-columns:0.9fr 1.4fr;gap:56px;align-items:start;}
-  @media(max-width:820px){.principal-grid{grid-template-columns:1fr;gap:32px;}}
-  .principal-card{border:1px solid var(--line-dark);border-radius:14px;padding:36px 34px;background:#07070f;}
-  .principal-mark{font-size:60px;margin-bottom:26px;}
-  .principal-card .name{font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#fff;margin-bottom:4px;}
-  .principal-card .role{font-family:'Montserrat',sans-serif;font-weight:500;font-size:13px;letter-spacing:0.02em;color:var(--green);margin-bottom:22px;}
-  .principal-card .detail{font-size:13.5px;line-height:1.85;color:var(--mist);}
-  .principal-body h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;line-height:1.25;letter-spacing:-0.01em;margin:0 0 22px;color:#fff;}
-  .principal-body p{font-size:16px;line-height:1.74;color:var(--mist);margin:0 0 18px;}
-  .principal-body p .w{color:#fff;font-weight:500;}
+  /* partner strip */
+  .partners{padding:var(--s-lg) 0 0;}
+  .partners .cap{color:var(--surface);display:block;margin-bottom:var(--s-xs);}
+  .partners div{font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;color:var(--surface);letter-spacing:0.02em;}
 
-  /* ── CONTACT ── */
-  .contact{background:var(--parchment);color:var(--ink);padding:88px 32px;}
-  .contact-inner{max-width:var(--maxw);margin:0 auto;text-align:center;}
-  .contact h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.02em;margin:0 0 20px;}
-  .contact p{font-size:21px;line-height:1.619;color:var(--ink);max-width:620px;margin:0 auto 32px;}
-  .contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .btn-dark{background:var(--ink);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.06em;padding:15px 30px;border-radius:999px;transition:transform .2s;}
-  .btn-dark:hover{transform:translateY(-2px);}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.06em;padding:15px 30px;border-radius:999px;transition:background .2s,color .2s;}
-  .btn-ghost:hover{background:var(--ink);color:#fff;}
-  @media(max-width:720px){.contact h2{font-size:34px;}}
+  /* ══ ABOUT (parchment) ══ */
+  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--s-2xl);align-items:start;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:var(--s-lg);}}
+  .facts{font-family:var(--mono);font-size:13px;line-height:1.9;border-top:2px solid var(--green-deep);padding-top:var(--s-sm);color:var(--ink);}
+  .facts b{color:var(--green-deep);font-weight:500;display:block;margin-top:var(--s-sm);letter-spacing:0.1em;}
+  .facts b:first-child{margin-top:0;}
 
-  /* ── FOOTER ── */
-  .footer{background:var(--ink);color:var(--mist);padding:40px 32px;border-top:1px solid var(--line-dark);}
-  .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-  .footer .lockup{font-size:22px;color:#fff;}
-  .footer .fine{font-family:'Roboto',sans-serif;font-weight:400;font-size:11.5px;letter-spacing:0.04em;color:var(--muted-2);}
+  /* ══ CONTACT ══ */
+  .contact{background:var(--ink);color:var(--paper);padding:var(--s-2xl) 0;}
+  .contact .hero-rule{margin-bottom:var(--s-lg);}
+  .contact p{color:var(--muted);}
+  .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
+  .btn:hover{background:var(--paper);color:var(--ink);}
 
-  /* ── REVEAL ── */
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
-  .reveal.in{opacity:1;transform:none;}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+  /* ══ FOOTER ══ */
+  .footer{background:var(--ink);color:var(--muted);padding:var(--s-lg) 0;border-top:1px solid var(--surface);}
+  .footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s-sm);}
+  .footer img{height:26px;display:block;}
+  .footer .fine{font-size:13px;line-height:1.615;}
+  .footer .fine a{color:var(--green);border-bottom:1px solid var(--green);}
 </style>
 </head>
 <body>
 
-<!-- ═══════════ NAV ═══════════ -->
+<!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#top" class="lockup-wrap"><span class="lockup"><span>PRI</span><svg class="mark" viewBox="0 0 143 128"><polygon points="0,0 77,55 0,128" fill="var(--green)"></polygon><polygon points="143,0 63,77 143,128" fill="var(--green)"></polygon></svg><span>O</span></span></a>
+    <a href="#top"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <div class="nav-links" id="navlinks">
-      <a href="#approach">Approach</a>
-      <a href="#services">What we do</a>
-      <a href="#work">Work</a>
-      <a href="#principal">Principal</a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a class="cap" href="#approach">Approach</a>
+      <a class="cap" href="#services">What I do</a>
+      <a class="cap" href="#work">The record</a>
+      <a class="cap" href="#about">About</a>
+      <a class="cap nav-cta" href="#contact">Get in touch</a>
     </div>
   </div>
 </nav>
 
-<!-- ═══════════ HERO ═══════════ -->
+<!-- ═══ HERO ═══ -->
 <header class="hero" id="top">
-  <svg class="hero-ghost" viewBox="0 0 143 128"><polygon points="0,0 77,55 0,128" fill="var(--green)"></polygon><polygon points="143,0 63,77 143,128" fill="var(--green)"></polygon></svg>
-  <div class="hero-inner">
+  <div class="wrap">
     <div class="hero-top">
-      <div class="hero-eyebrow"><span class="sq"></span>STRATEGIC&nbsp;COMMUNICATION</div>
-      <div class="hero-meta">MULTILATERAL &amp; INGO<br>AI-POWERED WORKFLOWS</div>
+      <span class="cap">Strategic communication</span>
+      <div class="hero-meta cap">Multilateral &amp; INGO<br>Geneva · Beijing · Los Angeles</div>
     </div>
-    <div class="hero-lockup">
-      <div class="lockup-wrap">
-        <span class="lockup"><span>PRI</span><svg class="mark" viewBox="0 0 143 128"><polygon points="0,0 77,55 0,128" fill="var(--green)"></polygon><polygon points="143,0 63,77 143,128" fill="var(--green)"></polygon></svg><span>O</span></span>
-        <div class="descriptor"><span>S</span><span>T</span><span>R</span><span>A</span><span>T</span><span>E</span><span>G</span><span>I</span><span>C</span><span>&nbsp;</span><span>C</span><span>O</span><span>M</span><span>M</span><span>U</span><span>N</span><span>I</span><span>C</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span></div>
-      </div>
-    </div>
-    <h1 class="hero-tagline">Meaning that <span class="accent">moves institutions.</span></h1>
+    <div class="hero-lockup"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></div>
+    <div class="hero-rule"></div>
+    <h1>Meaning that moves institutions.</h1>
   </div>
 </header>
 
-<!-- ═══════════ POSITIONING ═══════════ -->
+<!-- ═══ POSITIONING ═══ -->
 <section class="band" id="approach">
-  <div class="band-inner">
-    <div class="eyebrow reveal"><span class="sq"></span>POSITIONING</div>
-    <p class="lede reveal">Primo helps multilateral organizations and INGOs turn policy ambition into <span class="b">recognized legitimacy</span> — the currency by which institutional mandates move.</p>
-    <p class="lede-sub reveal">We combine strategic communication craft with AI-powered workflows to build the shared meaning that makes action possible: sharper positioning, faster editorial capacity, and the analytical tools to see how your message is landing across the fields that matter.</p>
-    <div class="pills reveal">
-      <span class="pill"><span class="dot"></span>UN AGENCIES</span>
-      <span class="pill"><span class="dot"></span>MULTILATERAL ORGANIZATIONS</span>
-      <span class="pill"><span class="dot"></span>INGOs</span>
-      <span class="pill"><span class="dot"></span>AI-DRIVEN WORKFLOWS</span>
-    </div>
+  <div class="wrap">
+    <span class="cap eyebrow">Positioning</span>
+    <p class="lede">I help multilateral organizations and INGOs get understood.</p>
+    <p class="body-2">By policymakers, by publics, by the people a mandate exists to serve. Fifteen years inside the UN system taught me where recognition is earned and where it quietly stalls. The craft is the full gamut: strategy, campaigns, media, editorial, measurement, crisis. AI runs underneath all of it now, multiplying what a small team can ship.</p>
   </div>
 </section>
 
-<!-- ═══════════ PHILOSOPHY ═══════════ -->
+<!-- ═══ PHILOSOPHY ═══ -->
 <section class="band dark">
-  <div class="band-inner">
-    <div class="eyebrow reveal"><span class="sq"></span>PHILOSOPHY</div>
-    <p class="philosophy-statement reveal">We believe communication is not what happens after the strategy is decided. It is how strategy becomes real — the work by which policy earns legitimacy, mandates gain recognition, and institutional ambition converts into action. In the multilateral world, being understood is not a downstream outcome. It is the <span class="accent">precondition for everything else.</span></p>
+  <div class="wrap">
+    <span class="cap eyebrow">Philosophy</span>
+    <p class="lede">Communication is how strategy becomes real.</p>
+    <p class="body-2">I learned this on early warning systems. The framing had to move from doom and gloom to resilience and security. The circle had to widen: the conversation belonged to experts, and the people who needed it most were not in it. So you listen first, and you stop assuming an expert audience. There are different levels of technical knowledge in the room, and different levels of English. You need to know how to bring others with you. That's the job.</p>
     <div class="pillars">
-      <div class="pillar reveal">
-        <div class="p-num">01</div>
-        <div class="p-title">Legitimacy engineered, not asserted</div>
-        <div class="p-desc">We turn abstract policy into the specific framings, audiences and evidence that institutional authority requires. Recognition isn't declared — it's built.</div>
+      <div class="pillar">
+        <span class="cap">01</span>
+        <div class="p-title">Strategy first</div>
+        <p>I walk in having read the mandate. Positioning and evidence before content, always.</p>
       </div>
-      <div class="pillar reveal">
-        <div class="p-num">02</div>
-        <div class="p-title">Mandate-scale editorial capacity</div>
-        <div class="p-desc">Agentic AI extends your team from bespoke moments to continuous presence: policy monitoring, editorial desks, cross-language reach. Legitimacy needs consistency; we deliver it.</div>
+      <div class="pillar">
+        <span class="cap">02</span>
+        <div class="p-title">The field, from inside</div>
+        <p>WMO, UNICEF China, FSC. I know where recognition is earned and where it is quietly withheld.</p>
       </div>
-      <div class="pillar reveal">
-        <div class="p-num">03</div>
-        <div class="p-title">The multilateral field, understood</div>
-        <div class="p-desc">UN agencies, INGOs, member-state audiences and partner ecosystems — we know where recognition is earned and where it is quietly withheld. Every message is calibrated for the field it speaks into.</div>
+      <div class="pillar">
+        <span class="cap">03</span>
+        <div class="p-title">Systems that multiply</div>
+        <p>Agentic pipelines extend a small team into continuous presence. The multiplier under the craft; the judgment stays human.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SERVICES ═══════════ -->
+<!-- ═══ SERVICES ═══ -->
 <section class="band" id="services">
-  <div class="band-inner">
-    <div class="eyebrow reveal"><span class="sq"></span>WHAT WE DO</div>
-    <div class="svc-head reveal">
-      <h2>Four ways we build the meaning that moves your mandate.</h2>
-      <p>One principal, a network of specialists, and AI-native workflows — scaled to the moment, from a single launch to a standing editorial function.</p>
+  <div class="wrap">
+    <span class="cap eyebrow">What I do</span>
+    <h2>Four ways in.</h2>
+    <p class="body-2" style="margin-bottom:var(--s-xl);">One principal, a network of specialists. Scaled to the moment, from a single launch to a standing editorial function.</p>
+    <div class="svc">
+      <span class="cap">01 · Strategy</span>
+      <h3>Narrative architecture</h3>
+      <p>I diagnose where recognition is being won or withheld, then build the positioning and the evidence that earn it. Strategy first: I arrive having already read the mandate.</p>
     </div>
-        <div class="svc-grid reveal">
-      <div class="svc">
-        <div class="s-num">01 — STRATEGY</div>
-        <h3>Narrative architecture</h3>
-        <p>We diagnose where recognition is being won or withheld, then build the positioning and evidence that earn institutional legitimacy. Strategy first — always walking into the room having already read the mandate.</p>
-      </div>
-      <div class="svc">
-        <div class="s-num">02 — INFRASTRUCTURE</div>
-        <h3>AI-native workflows</h3>
-        <p>We build the systems behind the strategy — secure, private LLM environments and automated pipelines that protect institutional data while multiplying your editorial output. AI is already here; strategies without it are behind.</p>
-      </div>
-      <div class="svc">
-        <div class="s-num">03 — PRODUCTION</div>
-        <h3>Mandate-scale editorial</h3>
-        <p>From flagship report launches to always-on presence — editorial craft and multimedia production that carry a mandate to the audiences that matter, engineered for human readers and answer engines (AEO) alike.</p>
-      </div>
-      <div class="svc">
-        <div class="s-num">04 — CAPACITY</div>
-        <h3>Systems handoff &amp; coaching</h3>
-        <p>We build capability, not dependency. We train teams, document the workflows, and coach communicators until the infrastructure is entirely theirs to run. Lift everyone, build on strengths, never the same mistake twice.</p>
-      </div>
+    <div class="svc">
+      <span class="cap">02 · Production</span>
+      <h3>Mandate-scale editorial</h3>
+      <p>From flagship report launches to always-on presence: editorial craft and multimedia production that carry a mandate to the audiences that matter, human readers and answer engines alike.</p>
+    </div>
+    <div class="svc">
+      <span class="cap">03 · Capacity</span>
+      <h3>Handoff &amp; coaching</h3>
+      <p>I build capability, not dependency. Teams trained, workflows documented, communicators coached until the infrastructure is entirely theirs to run.</p>
+    </div>
+    <div class="svc">
+      <span class="cap">04 · The multiplier</span>
+      <h3>AI-native workflows</h3>
+      <p>Listed last on purpose. Secure, private LLM environments and automated pipelines that protect institutional data while expanding output. AI powers the other three; it decides nothing.</p>
     </div>
   </div>
 </section>
-<!-- ═══════════ WORK ═══════════ -->
-<section class="band" id="work" style="padding-top:8px;">
-  <div class="band-inner">
-    <div class="eyebrow reveal"><span class="sq"></span>SELECTED WORK</div>
-    <div class="work-intro reveal">
-      <p class="lede">Primo is built on a fifteen-year track record — across the UN system, UNICEF, and the Forest Stewardship Council.</p>
-      <p class="lede-sub">These are not claims; they are the proof behind the method, drawn from the founder's career inside the institutions Primo now serves. Certain details can be anonymized for client confidentiality on request.</p>
-    </div>
+
+<!-- ═══ WORK ═══ -->
+<section class="band" id="work">
+  <div class="wrap">
+    <span class="cap eyebrow">The record</span>
+    <h2>I can throw numbers at you.</h2>
+    <p class="body-2">Fifteen years across the UN system, UNICEF, and the Forest Stewardship Council. Every result below is from my own desk, inside the institutions I now serve. Ask me about any of them.</p>
 
     <!-- 01 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">01</span><h3>Audience Growth at Global Scale</h3></div>
-      <div class="case-cap">Strategy · Multi-channel delivery · Measurable impact</div>
-      <p>Audience growth at this scale is never an accident. It is the result of brutal discipline and clear strategy. At WMO, total following sat at roughly 200,000; four years later it broke 1.3 million. We shut off the institutional noise — repositioned the channel strategy, prioritized LinkedIn to reach policymakers directly, and built a content machine a small team could actually run.</p>
-      <p>The deeper win was a deliberate act of framing. #StateOfClimate already existed as a conversation, but it skewed negative and was wrapped in jargon that repelled the people it needed. Communication research is clear: doom-and-gloom loses to framing built on benefit, security, and agency. We made the science legible — partnering with climate scientist Ed Hawkins to put his warming stripes at the heart of the visual narrative — and mentions rose 661%, at 4.6% engagement against a 2–3% sector benchmark.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Result</div><h4>200K → 1.3M followers</h4><p>Audience grew 6.5x in four years through structural channel repositioning and a storytelling-first approach.</p></div>
-        <div class="card"><div class="c-tag">Example</div><h4>Making the science legible</h4><p>The warming-stripes approach behind the 661% #StateOfClimate rise — dense data turned into a graphic that stops the scroll.</p><a class="card-link" href="https://www.linkedin.com/posts/climateaction-share-7283456792716574720-1kF3/" target="_blank" rel="noopener">View the post on LinkedIn →</a></div>
+    <article class="case" style="margin-top:var(--s-xl);">
+      <div>
+        <div class="focal" data-count="1.3" data-decimals="1" data-suffix="M">1.3M</div>
+        <span class="cap focal-label">Followers · four years</span>
+      </div>
+      <div>
+        <h3>Audience growth at global scale</h3>
+        <span class="cap case-cap">Strategy · Multi-channel delivery · Measurable impact</span>
+        <p>When I arrived at WMO, total following sat around 200,000. Four years later it broke 1.3 million. No accident. We shut off the institutional noise, moved the weight to LinkedIn where the policymakers actually are, and built a content machine a small team could run.</p>
+        <p>The deeper win was framing. #StateOfClimate skewed negative and jargon-bound, and doom loses to benefit, security, and agency every time. I partnered with climate scientist Ed Hawkins to put his warming stripes at the heart of the visual story. Mentions rose 661%, at 4.6% engagement against a 2 to 3% sector benchmark.</p>
+        <div class="ledger">
+          <div><b>RESULT</b>200,000 → 1.3M followers, all channels, four years</div>
+          <div><b>CONTEXT</b>#StateOfClimate mentions +661% · engagement 4.6% vs 2–3% benchmark</div>
+          <div><b>VERIFIED</b>WMO digital analytics · retrievable on request</div>
+        </div>
+        <div class="case-links"><a href="https://www.linkedin.com/posts/climateaction-share-7283456792716574720-1kF3/" target="_blank" rel="noopener">The warming-stripes post on LinkedIn →</a></div>
       </div>
     </article>
 
     <!-- 02 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">02</span><h3>From Broadcast to Predictive Community</h3></div>
-      <div class="case-cap">Community strategy · Social intelligence · ROI discipline</div>
-      <p>The era of the one-way broadcast is over. We led WMO's transition from a Broadcast Model to a Community Model, and the data proved it: a 600% increase in inbound messages, with engagement growth (+117.7%) dramatically outpacing impression growth (+94.1%). The groundwork we architected points to the next frontier — social listening as a predictive early-warning system for emerging narratives and reputational risk.</p>
-      <p>A conviction sits under this work. Everyone wants to go viral; almost nobody connects. In the anxious, always-on limbo of scrolling feeds and video calls, the audience is a moving target — and you hit it with consistency, not stunts. Adapt, adjust, listen, move; but stay fluid, disciplined, calm, and persistent. The authentic outlasts the trending, every time.</p>
-      <p>We also put a number on the function itself, valuing the channel portfolio at approximately $6.4 million USD using standard CPA, CPC, and CPM benchmarks — the market replacement cost of the audience and reach. Communication defended in the language executives actually use: assets and return.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Result</div><h4>600% more inbound dialogue</h4><p>Engagement growth outpaced impressions — proof content was triggering interaction, not just views.</p></div>
-        <div class="card"><div class="c-tag">Valuation</div><h4>~$6.4M owned digital asset</h4><p>The channel portfolio valued at market replacement cost — reframing communication from cost center to owned asset.</p></div>
+    <article class="case">
+      <div>
+        <div class="focal" data-count="600" data-prefix="+" data-suffix="%">+600%</div>
+        <span class="cap focal-label">Inbound dialogue</span>
+      </div>
+      <div>
+        <h3>From broadcast to community</h3>
+        <span class="cap case-cap">Community strategy · Social intelligence · ROI discipline</span>
+        <p>The one-way broadcast is over. I led WMO's shift from broadcast model to community model, and the data held up: inbound messages up 600%, engagement growth (+117.7%) outpacing impression growth (+94.1%). Everyone wants to go viral. Almost nobody connects. You hit a moving audience with consistency, not stunts.</p>
+        <p>I also put a number on the function itself: the channel portfolio valued at roughly USD 6.4 million in CPA, CPC, and CPM terms. Communication defended in the language executives actually use.</p>
+        <div class="ledger">
+          <div><b>RESULT</b>inbound +600% · engagement +117.7% vs impressions +94.1%</div>
+          <div><b>VALUATION</b>~USD 6.4M channel portfolio, market replacement cost</div>
+          <div><b>VERIFIED</b>2025 reporting cycle · retrievable on request</div>
+        </div>
       </div>
     </article>
 
     <!-- 03 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">03</span><h3>Changing the Conversation</h3></div>
-      <div class="case-cap">Narrative strategy · Human-centered storytelling · Multi-agency orchestration</div>
-      <p>When we took on Early Warnings for All — the UN mandate to protect every person on Earth with early warning systems by 2027 — the conversation belonged to technical experts. Missing were the people who need those systems most: countries facing extreme weather of rising frequency and intensity. We introduced storytelling, and for the first time they showed the world what early warnings actually look like — not just phone alerts, but flags on beaches for fishers, radio bulletins, church bells. Within a year, mentions grew more than tenfold, from 7.5 million to 80 million.</p>
-      <p>It required a hard narrative choice. In a moment when national interest has overtaken international cooperation — hopefully only for now — early warnings had to speak the language of security: food security, lives and livelihoods against flash floods, cyclones, drought, and heatwaves. And resilience, because adaptation moves policy where mitigation stalls — and it is the entry point to mitigation anyway: better early warnings mean better climate intelligence, and collective understanding rises. We led communications across the multi-agency task force with IFRC, UNDRR, and ITU, aligning massive agencies behind a single voice — then did the unglamorous thing that wins: we repeated it, everywhere, until it stuck. Framing opens the door; discipline walks through it.</p>
-      <div class="cards one">
-        <div class="card"><div class="c-tag">Campaign</div><h4>Early Warnings for All — changing whose voice is heard</h4><p>Brought the people who need early warnings most into the global conversation — messaging framework, asset library, and partner coordination for a unified launch.</p><a class="card-link" href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank" rel="noopener">View campaign assets on Trello →</a></div>
+    <article class="case">
+      <div>
+        <div class="focal" data-count="80" data-suffix="M">80M</div>
+        <span class="cap focal-label">Mentions · one year</span>
       </div>
-      <div class="video-grid">
-        <div>
-          <div class="video-frame" data-yt="35FvB7lst6o" role="button" tabindex="0" aria-label="Play video: Early Warnings for All hero video"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/35FvB7lst6o/hqdefault.jpg" alt="Early Warnings for All hero video" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
-          <p class="video-caption">The campaign hero video — anchoring early warnings to resilience and security. <a href="https://www.youtube.com/watch?v=35FvB7lst6o" target="_blank" rel="noopener" style="color:var(--green-deep);font-weight:500;">Watch on YouTube →</a></p>
+      <div>
+        <h3>Changing the conversation</h3>
+        <span class="cap case-cap">Narrative strategy · Human-centered storytelling · Multi-agency orchestration</span>
+        <p>Early Warnings for All is the UN mandate to protect every person on Earth with early warning systems by 2027. When we took it on, the conversation belonged to technical experts. The people who need those systems most were missing from it. We brought in storytelling: flags on beaches for fishers, radio bulletins, church bells. Within a year, mentions on X grew from 7.5 million to 80 million.</p>
+        <p>I led communications across the task force with IFRC, UNDRR, and ITU, ran the CHF 200,000 campaign budget and its procurement, and got very large agencies behind one voice. Then we repeated it, everywhere, until it stuck.</p>
+        <div class="ledger">
+          <div><b>RESULT</b>7.5M → 80M mentions on X in one year (+951%)</div>
+          <div><b>BUDGET</b>CHF 200,000 · procurement tender included</div>
+          <div><b>TASK FORCE</b>WMO · IFRC · UNDRR · ITU</div>
         </div>
-        <div>
-          <div class="video-frame" data-yt="ZNY24cMkuh0" role="button" tabindex="0" aria-label="Play video: Early Warnings for All interview series"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/ZNY24cMkuh0/hqdefault.jpg" alt="Early Warnings for All interview series" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
-          <p class="video-caption">Interviews bringing early warnings to life on the ground — including in Spanish. <a href="https://www.youtube.com/watch?v=ZNY24cMkuh0" target="_blank" rel="noopener" style="color:var(--green-deep);font-weight:500;">Watch on YouTube →</a></p>
+        <div class="case-links"><a href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank" rel="noopener">Campaign assets on Trello →</a></div>
+        <div class="video-grid">
+          <div>
+            <div class="video-frame" data-yt="35FvB7lst6o" role="button" tabindex="0" aria-label="Play video: Early Warnings for All hero video"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/35FvB7lst6o/hqdefault.jpg" alt="Early Warnings for All hero video" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+            <p class="video-caption">The campaign hero video. <a href="https://www.youtube.com/watch?v=35FvB7lst6o" target="_blank" rel="noopener">Watch on YouTube →</a></p>
+          </div>
+          <div>
+            <div class="video-frame" data-yt="ZNY24cMkuh0" role="button" tabindex="0" aria-label="Play video: Early Warnings for All interview series"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/ZNY24cMkuh0/hqdefault.jpg" alt="Early Warnings for All interview series" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+            <p class="video-caption">On the ground, including in Spanish. <a href="https://www.youtube.com/watch?v=ZNY24cMkuh0" target="_blank" rel="noopener">Watch on YouTube →</a></p>
+          </div>
         </div>
       </div>
     </article>
 
-    <!-- 04 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">04</span><h3>Award-Winning AI Product</h3></div>
-      <div class="case-cap">AI product launch · Frontier-tech storytelling · Information integrity</div>
-      <p>The knowledge was never missing — it was buried. Thousands of PDFs, scattered webpages, files named final_final_v2: the world's authoritative climate and weather intelligence, hidden precisely when the highest-stakes policy decisions needed it instantly. AskWMO changed that — ask a question, get an authoritative answer drawn straight from WMO's foundational document base, no digging through folders. We were first, and it showed where institutional knowledge is heading.</p>
-      <p>And access is the integrity battle: when the right science is hard to reach, misinformation — the honest kind of wrong — festers, and disinformation — the deliberate kind — triumphs. For this work, the founder was one of four named recipients of the 2024 Royal Meteorological Society Award for Impact on Science, Policy or Society — leading the digital communication strategy and launch narrative for a frontier-tech tool that reinforced scientific authority rather than degrading it.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Award</div><h4>Royal Meteorological Society Award 2024</h4><p>AskWMO won the RMS Award for Impact on Science, Policy or Society.</p><a class="card-link" href="https://www.rmets.org/rmets-awards/2024-winners/awards-impact-science-policy-or-society-2024" target="_blank" rel="noopener">View the award citation →</a></div>
-        <div class="card"><div class="c-tag">Recognition</div><h4>RMS 2024 winners announcement</h4><p>Recognized among AI-driven solutions enhancing access to authoritative climate information.</p><a class="card-link" href="https://www.rmets.org/news/royal-meteorological-society-announces-2024-award-winners-landmark-anniversary-year" target="_blank" rel="noopener">Read the announcement →</a></div>
+    <!-- 04 · NEW -->
+    <article class="case">
+      <div>
+        <div class="focal" data-count="400" data-prefix="€" data-suffix="K">€400K</div>
+        <span class="cap focal-label">Grant won · FSC</span>
+      </div>
+      <div>
+        <h3>Winning the money, running the money</h3>
+        <span class="cap case-cap">Proposals · Donor relations · Budget stewardship</span>
+        <p>Somebody has to win the money. At FSC I wrote the proposal that won IKEA's EUR 400,000 grant for the New Approaches smallholder certification project, then served as communications lead on the core team and wrote the donor's annual report myself. At WMO I ran the CHF 200,000 Early Warnings for All budget, procurement tender included. On MedEWSa, a EUR 5 million Horizon Europe project, I developed the communication strategy and delegated the delivery.</p>
+        <p>Money arrives on a story and stays on the reporting. I've done both ends.</p>
+        <div class="ledger">
+          <div><b>GRANT</b>EUR 400,000 · IKEA · New Approaches to Smallholder Certification</div>
+          <div><b>ROLE</b>proposal author · communications lead · donor's annual report</div>
+          <div><b>ALSO</b>CHF 200,000 EW4All budget · EUR 5M MedEWSa, strategy (delivery delegated)</div>
+        </div>
       </div>
     </article>
 
     <!-- 05 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">05</span><h3>AI-Native Practice: Answer Engines &amp; Agentic Systems</h3></div>
-      <div class="case-cap">GEO / AEO · Applied AI · The AI content supply chain</div>
-      <p>The audience is no longer only human. Increasingly, answers come from AI chatbots — and an institution absent from the sources those models draw on is invisible at the moment of decision. Primo has built a complete GEO/AEO framework for this reality: content engineered for machine extraction, mapped to the off-site sources that actually feed the models, across Western and Chinese AI ecosystems alike. AskWMO was the early instinct; the framework is the developed method, ready to deploy. The deeper point: information behavior keeps migrating — from the library card catalog to the search engine to the chatbot — and communication has to move with it. Meeting people where they ask is the discipline; only the destination changed.</p>
-      <p>And we build, not just advise. The founder architected an autonomous AI agent producing a daily strategic intelligence brief — defined voice, scheduled pipeline, strict budget — and is developing an AI content supply chain: one source of truth fanned into platform-native, GEO-optimized assets, with a human always in the loop for judgment.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Framework</div><h4>A complete GEO/AEO strategy</h4><p>Becoming a cited source in LLMs — machine-extractable content plus the off-site source map that feeds the models.</p></div>
-        <div class="card"><div class="c-tag">Applied AI</div><h4>Agentic systems, running daily</h4><p>An autonomous intelligence-brief agent in production, and a human-in-the-loop content supply chain in development.</p></div>
+    <article class="case">
+      <div>
+        <div class="focal">1 of 4</div>
+        <span class="cap focal-label">Named recipients · RMetS 2024</span>
+      </div>
+      <div>
+        <h3>AskWMO and the integrity battle</h3>
+        <span class="cap case-cap">AI product launch · Frontier-tech storytelling · Information integrity</span>
+        <p>The knowledge was never missing. It was buried: thousands of PDFs, scattered webpages, files named final_final_v2, the world's authoritative climate intelligence hidden exactly when decisions needed it fast. AskWMO let you ask a question and get an answer drawn straight from WMO's document base. I co-created it and led the digital strategy and launch narrative.</p>
+        <p>Access is also the integrity battle. When the right science is hard to reach, misinformation festers and disinformation wins. In 2024 I was one of four named recipients of the Royal Meteorological Society Award for Impact on Science, Policy or Society.</p>
+        <div class="ledger">
+          <div><b>AWARD</b>Royal Meteorological Society 2024 · Impact on Science, Policy or Society</div>
+          <div><b>CONTEXT</b>part of the UN information-integrity initiative</div>
+          <div><b>ROLE</b>co-created · digital strategy and launch narrative</div>
+        </div>
+        <div class="case-links">
+          <a href="https://www.rmets.org/rmets-awards/2024-winners/awards-impact-science-policy-or-society-2024" target="_blank" rel="noopener">The award citation →</a>
+          <a href="https://www.rmets.org/news/royal-meteorological-society-announces-2024-award-winners-landmark-anniversary-year" target="_blank" rel="noopener">The announcement →</a>
+        </div>
       </div>
     </article>
 
-    <!-- 06 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">06</span><h3>Building Capability That Stays</h3></div>
-      <div class="case-cap">Training · Playbooks · Coaching &amp; enablement</div>
-      <p>The highest form of communication leadership is making an organization capable of doing the work without you. Primo treats capacity building as a core service — training teams, writing the playbooks, coaching until the skill is theirs. The approach comes from the basketball court: lift everyone, build on strengths, never the same mistake twice, then let people shine.</p>
-      <p>It is proven at every scale: 30+ Forest Stewardship Council national offices trained to run their own communications; a WMO content operation scaled across 30+ focal points with a Federated Model granting regional posting authority within central standards. Capacity, not dependency.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Training</div><h4>30+ FSC national offices</h4><p>Independent communications capability built across a global network.</p></div>
-        <div class="card"><div class="c-tag">Enablement</div><h4>30+ focal points &amp; a Federated Model</h4><p>Templates, coaching, and a hub-and-spoke model with regional posting authority.</p></div>
+    <!-- 06 · NEW -->
+    <article class="case">
+      <div>
+        <div class="focal">3×</div>
+        <span class="cap focal-label">Right message · right person · right time</span>
+      </div>
+      <div>
+        <h3>The principal's desk</h3>
+        <span class="cap case-cap">Executive communications · Speeches · Briefings</span>
+        <p>The quietest work never posts. I drafted speeches and briefings for WMO's Assistant Secretary-General, wrote the briefing note to the Chief of Staff on climate information integrity, with the outcome public on wmo.int, and ran the UNICEF China Country Representative's personal platform. Leadership at every level, and the lesson is the same. Principals have a lot on their plate, so you make it an easy lift: build the trust, and get the information there on time and at quality.</p>
+        <p>The right message from the right person at the right time saves lives.</p>
+        <div class="ledger">
+          <div><b>PRINCIPALS</b>WMO Assistant Secretary-General · Chief of Staff · UNICEF China Country Representative · campaign leadership</div>
+          <div><b>FORMATS</b>speeches · briefing notes · scenario notes · personal platforms</div>
+          <div><b>DOCTRINE</b>easy lift · on time · at quality</div>
+        </div>
       </div>
     </article>
 
     <!-- 07 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">07</span><h3>Crisis Communication &amp; Knowledge Infrastructure</h3></div>
-      <div class="case-cap">C4D · Behavior change · Organizational learning</div>
-      <p>When COVID-19 emptied schools across China, the problem wasn't distributing information — it was changing behavior in a moment of panic. At UNICEF China, we led the Safe School Return campaign, a C4D framework built to replace parental fear with clarity. It won an award; more importantly, its assets were replicated by UNICEF offices far beyond China. A model that travels.</p>
-      <p>A crisis also generates lessons faster than any organization can absorb them. We built the pipes to catch that knowledge — the SharePoint architecture capturing real-time lessons from the field, connecting UNICEF's 190 country offices, recognized with a UNICEF Inspira Award. Crisis infrastructure, not just editorial.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Communication for Development</div><h4>Safe School Return — UNICEF China</h4><p>Award-recognized behavior-change campaign, with assets built to scale globally.</p><a class="card-link" href="https://www.unicef.cn/en/covid-19/safe-school-return" target="_blank" rel="noopener">View the campaign →</a></div>
-        <div class="card"><div class="c-tag">Award · Inspira</div><h4>Knowledge across 190 country offices</h4><p>COVID-19 lessons-learned infrastructure turning emergency chaos into a permanent, searchable asset.</p></div>
+    <article class="case">
+      <div>
+        <div class="focal">GEO</div>
+        <span class="cap focal-label">Answer-engine practice</span>
+      </div>
+      <div>
+        <h3>Where the answers come from</h3>
+        <span class="cap case-cap">GEO / AEO · Applied AI · Two ecosystems</span>
+        <p>Information behavior keeps migrating: card catalog, search engine, chatbot. Meeting people where they ask is the discipline; only the destination changed. So I built a complete GEO/AEO framework: content engineered for machine extraction, mapped to the off-site sources that actually feed the models, Western and Chinese AI ecosystems alike.</p>
+        <p>And I build, not just advise. An autonomous agent produces my strategic brief every morning, on a defined voice and a strict budget. The judgment stays human. That part is not negotiable.</p>
+        <div class="ledger">
+          <div><b>FRAMEWORK</b>GEO/AEO · Western + Chinese AI ecosystems</div>
+          <div><b>RUNNING</b>autonomous daily brief agent · human-in-the-loop supply chain</div>
+        </div>
       </div>
     </article>
 
     <!-- 08 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">08</span><h3>Flagship Report Launch</h3></div>
-      <div class="case-cap">Editorial authority · Launch craft · Translating science</div>
-      <p>A technical report is useless if it dies on a PDF. For WMO's State of Climate Services 2023: Health, we refused to just push data — we produced WMO's first-ever video case study, pulling a single data point on heatwaves and putting a camera on outdoor workers in Greece to show what that data feels like on the ground.</p>
-      <p>No single format carries every story. We partner with technical institutions and creatives alike — tapping the European Space Agency for Earth observation imagery and bringing satellite data to life for recurring flagship moments. Content engineered not just to inform, but to inspire.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Report</div><h4>State of Climate Services 2023: Health</h4><p>WMO's first video case study — abstract heatwave data made human.</p><a class="card-link" href="https://wmo.int/resources/publication-series/state-of-climate-services/2023-state-of-climate-services-health" target="_blank" rel="noopener">View the report →</a></div>
-        <div class="card"><div class="c-tag">Partnership</div><h4>Bringing satellite data to life</h4><p>ESA Earth observation imagery transformed with experts and creatives into content that inspires.</p><a class="card-link" href="https://www.facebook.com/reel/2866239786891608" target="_blank" rel="noopener">Watch on Facebook →</a></div>
+    <article class="case">
+      <div>
+        <div class="focal" data-count="30" data-suffix="+">30+</div>
+        <span class="cap focal-label">National offices trained</span>
       </div>
-      <div class="video-single">
-        <div class="video-frame" data-yt="LTnXvG8FXRk" role="button" tabindex="0" aria-label="Play video: WMO State of Climate Services Health video case study"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/LTnXvG8FXRk/hqdefault.jpg" alt="WMO State of Climate Services Health video case study" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
-        <p class="video-caption">Story collecting in the field — the report's heatwave data as the lived reality of outdoor workers in Greece. <a href="https://www.youtube.com/watch?v=LTnXvG8FXRk" target="_blank" rel="noopener" style="color:var(--green-deep);font-weight:500;">Watch on YouTube →</a></p>
+      <div>
+        <h3>Capability that stays</h3>
+        <span class="cap case-cap">Training · Playbooks · Coaching &amp; enablement</span>
+        <p>The highest form of communication leadership is making an organization capable of doing the work without you. I trained 30+ FSC national offices to run their own communications. At WMO I scaled a content operation across 30+ focal points with a federated model: regional posting authority inside central standards.</p>
+        <p>The approach comes from the basketball court. Lift everyone, build on strengths, never the same mistake twice, then let people shine.</p>
+        <div class="ledger">
+          <div><b>FSC</b>30+ national offices, independent comms capability</div>
+          <div><b>WMO</b>30+ focal points · federated model · central standards</div>
+        </div>
       </div>
     </article>
 
     <!-- 09 -->
-    <article class="case reveal">
-      <div class="case-head"><span class="case-num">09</span><h3>Thought Leadership</h3></div>
-      <div class="case-cap">Intellectual authority · Public writing</div>
-      <p>A strategic communication practice has to be a voice in the room. We publish at the intersection of communication, AI, and Earth system science — from the MeteoWorld series that positioned WMO at the AI frontier to current writing on Generative Engine Optimization, the discipline of making content legible to the AI systems that increasingly mediate every answer.</p>
-      <div class="cards">
-        <div class="card"><div class="c-tag">Article</div><h4>Can AI Language Models Bridge the Earth System Knowledge Gap?</h4><p>The intellectual foundation behind AskWMO.</p><a class="card-link" href="https://wmo.int/media/magazine-article/can-artificial-intelligence-language-models-bridge-earth-system-knowledge-gap" target="_blank" rel="noopener">Read the article →</a></div>
-        <div class="card"><div class="c-tag">Article</div><h4>Advancing Earth System Science with AI</h4><p>How AI is reshaping the production and sharing of authoritative climate knowledge.</p><a class="card-link" href="https://wmo.int/media/magazine-article/advancing-earth-system-science-artificial-intelligence" target="_blank" rel="noopener">Read the article →</a></div>
+    <article class="case">
+      <div>
+        <div class="focal" data-count="190">190</div>
+        <span class="cap focal-label">Country offices connected</span>
+      </div>
+      <div>
+        <h3>Crisis, twice over</h3>
+        <span class="cap case-cap">C4D · Behavior change · Knowledge infrastructure</span>
+        <p>When COVID-19 emptied schools across China, the problem was changing behavior in a moment of panic. At UNICEF China I led Safe School Return, a C4D campaign built to replace parental fear with clarity. It won an award, and its assets were replicated by UNICEF offices far beyond China.</p>
+        <p>A crisis also generates lessons faster than any organization can absorb them. So I co-designed the knowledge infrastructure that caught them in real time across UNICEF's 190 country offices. That one earned an Inspira Award.</p>
+        <div class="ledger">
+          <div><b>CAMPAIGN</b>Safe School Return · award-winning C4D · assets replicated globally</div>
+          <div><b>INFRASTRUCTURE</b>COVID-19 lessons hub · 190 country offices · Inspira Award 2021</div>
+        </div>
+        <div class="case-links"><a href="https://www.unicef.cn/en/covid-19/safe-school-return" target="_blank" rel="noopener">The campaign →</a></div>
       </div>
     </article>
 
-  </div>
-</section>
-
-<!-- ═══════════ PRINCIPAL ═══════════ -->
-<section class="band dark" id="principal">
-  <div class="band-inner">
-    <div class="eyebrow reveal"><span class="sq"></span>THE PRINCIPAL</div>
-    <div class="principal-grid">
-      <div class="principal-card reveal">
-        <div class="principal-mark"><span class="lockup icon-only"><svg class="mark" viewBox="0 0 143 128"><polygon points="0,0 77,55 0,128" fill="var(--green)"></polygon><polygon points="143,0 63,77 143,128" fill="var(--green)"></polygon></svg></span></div>
-        <div class="name">Jesse Cruz</div>
-        <div class="role">Principal · Strategic Communication</div>
-        <div class="detail">
-          15 years · UN system, INGOs<br>
-          WMO · UNICEF · FSC<br>
-          Tsinghua University<br>
-          English · Spanish<br>
-          Operating globally across multilateral ecosystems
+    <!-- 10 -->
+    <article class="case">
+      <div>
+        <div class="focal">Nº1</div>
+        <span class="cap focal-label">WMO's first video case study</span>
+      </div>
+      <div>
+        <h3>Reports that refuse to die on a PDF</h3>
+        <span class="cap case-cap">Editorial authority · Launch craft · Translating science</span>
+        <p>A technical report is useless if it dies on a PDF. For WMO's State of Climate Services 2023: Health, we produced the organization's first video case study: one data point on heatwaves, a camera on outdoor workers in Greece, the number turned into someone's afternoon shift. For the recurring flagship moments I partnered with the European Space Agency to bring satellite imagery to life.</p>
+        <div class="ledger">
+          <div><b>FIRST</b>WMO's first video case study · State of Climate Services 2023: Health</div>
+          <div><b>PARTNER</b>European Space Agency · Earth-observation imagery</div>
+        </div>
+        <div class="case-links">
+          <a href="https://wmo.int/resources/publication-series/state-of-climate-services/2023-state-of-climate-services-health" target="_blank" rel="noopener">The report →</a>
+          <a href="https://www.facebook.com/reel/2866239786891608" target="_blank" rel="noopener">The ESA reel →</a>
+        </div>
+        <div class="video-single">
+          <div class="video-frame" data-yt="LTnXvG8FXRk" role="button" tabindex="0" aria-label="Play video: WMO State of Climate Services Health video case study"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/LTnXvG8FXRk/hqdefault.jpg" alt="WMO State of Climate Services Health video case study" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+          <p class="video-caption">Story collecting in the field, Greece. <a href="https://www.youtube.com/watch?v=LTnXvG8FXRk" target="_blank" rel="noopener">Watch on YouTube →</a></p>
         </div>
       </div>
-      <div class="principal-body reveal">
-        <h2>A scholar-practitioner behind every engagement.</h2>
-        <p>Primo is led by Jesse Cruz, who came to this work as a student of it and has never stopped. His intellectual life circles one question: <span class="w">how power communicates.</span> It began with a bachelor's in Politics and History and deepened through master's research at Tsinghua University — analyzing how international organizations build sustainability standards and execute complex diplomatic narratives.</p>
-        <p>That research instinct is matched by fifteen years of practice at the highest level of the multilateral system: deputy to the Head of Strategic Communication at the World Meteorological Organization, and senior roles at UNICEF China and the Forest Stewardship Council. The thread is always the same — engineering the architecture of political communication, understanding why it works, and deploying it to secure institutional mandates.</p>
-        <p>He backs it with continuous, chartered-level professional development: CIPR-certified in PR strategy and campaign management (Chartered Institute of Public Relations); European Policy Communications in the Digital Era (CEPOW, Madrid); UNITAR's Diplomacy 4.0 — AI, cyberdiplomacy, and internet governance; the UN Emerging Leaders programme and the UNSSC/IE mentorship programme (IE School of Politics, Economics &amp; Global Affairs); and a Communication for Development (C4D) foundation extended through behavioral-communication training with NYU, WHO, and UNICEF. <span class="w">The best practitioners are perpetual students</span> — and every Primo engagement carries both the rigorous objectivity of research and the technical discipline of modern, AI-powered execution.</p>
+    </article>
+
+    <!-- 11 · full width close -->
+    <article class="case full">
+      <div>
+        <h3>The voice in the room</h3>
+        <span class="cap case-cap">Thought leadership · Public writing</span>
+        <p>A practice has to be a voice in the room. I publish at the intersection of communication, AI, and Earth system science: the MeteoWorld pieces that put WMO at the AI frontier, and current writing on making content legible to the answer engines that increasingly mediate every question.</p>
+        <div class="case-links">
+          <a href="https://wmo.int/media/magazine-article/can-artificial-intelligence-language-models-bridge-earth-system-knowledge-gap" target="_blank" rel="noopener">Can AI Language Models Bridge the Earth System Knowledge Gap? →</a>
+          <a href="https://wmo.int/media/magazine-article/advancing-earth-system-science-artificial-intelligence" target="_blank" rel="noopener">Advancing Earth System Science with AI →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="partners">
+      <span class="cap">Campaign &amp; project partners, across engagements</span>
+      <div>IFRC · UNDRR · ITU · ESA · Meta · Google · Amazon · Tencent</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="band parchment" id="about">
+  <div class="wrap">
+    <span class="cap eyebrow">About</span>
+    <div class="about-grid">
+      <div>
+        <h2>A student of how power communicates.</h2>
+        <p>I came to this work as a student of it and never stopped. The question that holds me: how power communicates. It started with a bachelor's in politics and history and deepened through graduate research at Tsinghua University, where my thesis in progress decodes China's South-South Cooperation discourse with a computational grounded-theory method, run on an open-source pipeline.</p>
+        <p>Then fifteen years of practice: deputy to the Head of Strategic Communication at WMO, senior roles at UNICEF China and the Forest Stewardship Council. I have communicated governance from the inside too: FSC's three-chamber system, WMO's Congress and Executive Council.</p>
+        <p>I keep training because the best practitioners are perpetual students: CIPR-certified in PR strategy and campaign management, UNITAR's Diplomacy 4.0, the UN Emerging Leaders programme, behavioral-communication work with NYU, WHO, and UNICEF. I work in English and Spanish, both native.</p>
+      </div>
+      <div class="facts">
+        <b>PRACTICE</b>
+        15 years · UN system, INGOs<br>
+        WMO · UNICEF China · FSC<br>
+        Principal, Primo Strategic Communication
+        <b>EDUCATION</b>
+        Tsinghua University · graduate studies, thesis in progress<br>
+        MA International Relations &amp; Diplomacy · UOC &amp; UNITAR<br>
+        BA Politics &amp; History · Woodbury University
+        <b>FORMATION</b>
+        CIPR · PR strategy &amp; campaign management<br>
+        UNITAR Diplomacy 4.0 · UN Emerging Leaders<br>
+        C4D · NYU / WHO / UNICEF behavioral training
+        <b>LANGUAGES</b>
+        English · Spanish, both native
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ CONTACT ═══════════ -->
+<!-- ═══ CONTACT ═══ -->
 <section class="contact" id="contact">
-  <div class="contact-inner reveal">
-    <h2>Let's build meaning that moves.</h2>
-    <p>Whether it's sharper positioning, a standing editorial capacity, or AI-native workflows built for your mandate — Primo is ready. Tell us what your institution needs to be understood.</p>
-    <div class="contact-actions">
-      <a class="btn-dark" href="mailto:primo.communication.io@gmail.com">Start a conversation</a>
-    </div>
+  <div class="wrap">
+    <div class="hero-rule"></div>
+    <h2>Tell me what needs to be understood.</h2>
+    <p>A launch, a mandate, a mess: write to me. I read everything about your institution before the first call. English or Spanish.</p>
+    <a class="btn" href="mailto:primo.communication.io@gmail.com">Start a conversation</a>
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <div class="footer-inner">
-    <a href="#top" class="lockup-wrap"><span class="lockup"><span>PRI</span><svg class="mark" viewBox="0 0 143 128"><polygon points="0,0 77,55 0,128" fill="var(--green)"></polygon><polygon points="143,0 63,77 143,128" fill="var(--green)"></polygon></svg><span>O</span></span></a>
-    <div class="fine">Primo Strategic Communication LLC &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; Meaning that moves institutions. &nbsp;·&nbsp; <a href="brand.html" style="color:var(--green);border-bottom:1px solid var(--green);">Brand system</a></div>
+    <a href="#top"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></a>
+    <div class="fine">Primo Strategic Communication LLC · © 2026 · Meaning that moves institutions.</div>
   </div>
 </footer>
 
 <script>
-  // Scroll reveal
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-
   // Lite YouTube embeds: swap poster for player on click
   document.querySelectorAll('.video-frame[data-yt]').forEach(el => {
     const play = () => {
@@ -503,6 +566,35 @@
     el.addEventListener('click', play);
     el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
   });
+  // CountUp — the primo-motion house form, ported to the page: the focal
+  // number counts to its value decelerating hard, lands, and holds.
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  const runCount = el => {
+    const target = parseFloat(el.dataset.count);
+    const dec = parseInt(el.dataset.decimals || '0', 10);
+    const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    const dur = 1600;
+    let start = null;
+    const frame = ts => {
+      if (start === null) start = ts;
+      const t = Math.min((ts - start) / dur, 1);
+      el.textContent = pre + (target * easeOutExpo(t)).toFixed(dec) + suf;
+      if (t < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+  if (!reduced && 'IntersectionObserver' in window) {
+    const seen = new WeakSet();
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !seen.has(e.target)) {
+          seen.add(e.target); runCount(e.target); io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('.focal[data-count]').forEach(el => io.observe(el));
+  }
 
   // Close mobile menu on link tap
   document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
