@@ -8,10 +8,14 @@
 <meta property="og:title" content="Primo Strategic Communication">
 <meta property="og:description" content="Fifteen years of strategic communication inside the UN system. Strategy, campaigns, editorial, and measurement for multilateral organizations and INGOs.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://w0rldcit1zen.github.io/Portfolio/">
+<meta property="og:image" content="https://w0rldcit1zen.github.io/Portfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="assets/primo-mark-green.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/roboto-var.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,6 +32,8 @@
 }
 </script>
 <style>
+  @font-face{font-family:'Montserrat';font-style:normal;font-weight:400 800;font-display:swap;src:url('fonts/montserrat-var.woff2') format('woff2');}
+  @font-face{font-family:'Roboto';font-style:normal;font-weight:400 500;font-display:swap;src:url('fonts/roboto-var.woff2') format('woff2');}
   /* ══ Primo System C tokens — generated values from tokens.json ══ */
   :root{
     --ink:#1A1B2E;
@@ -56,16 +62,22 @@
   img{max-width:100%;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);}
 
-  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 var(--s-lg);}
+  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 var(--s-lg);overflow-wrap:break-word;}
   h3{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;line-height:1.25;margin:0;}
   .cap{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;line-height:1.615;letter-spacing:0.14em;text-transform:uppercase;}
   p{margin:0 0 var(--s-md);max-width:66ch;}
   p:last-child{margin-bottom:0;}
 
+  @media(max-width:560px){
+    h2{font-size:34px;}
+    .wrap{padding:0 var(--s-md);}
+    .nav-inner,.footer-inner{padding:0 var(--s-md);}
+  }
+
   /* ══ NAV ══ */
   .nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid var(--surface);}
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);height:68px;display:flex;align-items:center;justify-content:space-between;}
-  .nav img{height:28px;display:block;}
+  .nav img{height:28px;width:auto;aspect-ratio:4853.2/2057.7;display:block;}
   .nav-links{display:flex;align-items:center;gap:var(--s-lg);}
   .nav-links a{color:var(--muted);transition:color .2s;}
   .nav-links a.cap:hover{color:var(--paper);}
@@ -84,7 +96,7 @@
   .hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--s-2xl);}
   .hero-top .cap{color:var(--muted);}
   .hero-meta{text-align:right;color:var(--muted);}
-  .hero-lockup img{width:min(560px,80vw);display:block;margin-bottom:var(--s-xl);}
+  .hero-lockup img{width:min(560px,80vw);height:auto;aspect-ratio:4853.2/2057.7;display:block;margin-bottom:var(--s-xl);}
   .hero-rule{width:var(--s-2xl);height:2px;background:var(--green);margin-bottom:var(--s-lg);}
   .hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:89px;line-height:1.1;letter-spacing:-0.015em;margin:0;max-width:11em;}
   @media(max-width:860px){.hero h1{font-size:55px;}.hero-meta{display:none;}}
@@ -166,7 +178,7 @@
   /* ══ FOOTER ══ */
   .footer{background:var(--ink);color:var(--muted);padding:var(--s-lg) 0;border-top:1px solid var(--surface);}
   .footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s-sm);}
-  .footer img{height:26px;display:block;}
+  .footer img{height:26px;width:auto;aspect-ratio:4853.2/2057.7;display:block;}
   .footer .fine{font-size:13px;line-height:1.615;}
   .footer .fine a{color:var(--green);border-bottom:1px solid var(--green);}
 </style>
@@ -547,7 +559,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <a href="#top"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></a>
-    <div class="fine">Primo Strategic Communication LLC · © 2026 · Meaning that moves institutions.</div>
+    <div class="fine">Primo Strategic Communication LLC · Sheridan, Wyoming, USA · Operating globally · © 2026 · Meaning that moves institutions.</div>
   </div>
 </footer>
 
