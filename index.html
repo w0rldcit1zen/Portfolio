@@ -16,6 +16,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/primo-mark-green.svg">
 <link rel="preload" href="fonts/montserrat-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/roboto-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window)document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,6 +73,15 @@
     .wrap{padding:0 var(--s-md);}
     .nav-inner,.footer-inner{padding:0 var(--s-md);}
   }
+
+  /* ══ SCROLL REVEALS ══ — opacity and 8px of lift, the house easing, an 89ms
+     stagger. Only armed under html.js (no JS, reduced motion, or no
+     IntersectionObserver = the static page). */
+  .js .rv>*,.js .rv-self{opacity:0;transform:translateY(8px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+  .js .rv.in>*,.js .rv-self.in{opacity:1;transform:none;}
+  .js .rv>*:nth-child(2){transition-delay:.089s;}
+  .js .rv>*:nth-child(3){transition-delay:.178s;}
+  .js .rv>*:nth-child(4){transition-delay:.267s;}
 
   /* ══ NAV ══ */
   .nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid var(--surface);}
@@ -242,7 +252,7 @@
     <span class="cap eyebrow">Philosophy</span>
     <p class="lede">Communication is how strategy becomes real.</p>
     <p class="body-2">I learned this on early warning systems. The framing had to move from doom and gloom to resilience and security, and the circle had to widen: the conversation belonged to experts, and the people who needed it most were not in it. The fix is point guard work. The whole floor has to know the play before the offense can run, so you listen first, you stop assuming an expert audience, and you adjust for different levels of technical knowledge and different levels of English. Everyone gets brought along, or the message didn't work. That's the job.</p>
-    <div class="pillars">
+    <div class="pillars rv">
       <div class="pillar">
         <span class="cap">01</span>
         <div class="p-title">Strategy first</div>
@@ -268,32 +278,32 @@
     <span class="cap eyebrow">What I do</span>
     <h2>Five ways to work with me.</h2>
     <p class="body-2" style="margin-bottom:var(--s-xl);">One principal, a network of specialists. Scaled to the moment, from a single launch to a standing editorial function.</p>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">01 · Research</span>
       <h3>Know your publics</h3>
       <p>Segmentation studies and the media landscape before a franc is spent: who your audiences actually are, what they believe, where recognition will be won. The baseline everything else is measured against.</p>
     </div>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">02 · Strategy</span>
       <h3>Narrative architecture</h3>
       <p>I diagnose where recognition is being won or withheld, then build the outcome objectives, the power map, and a message house where every proof point carries a citation. The crisis pack gets built here too, before you need it. I arrive having already read the mandate.</p>
     </div>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">03 · Production</span>
       <h3>Mandate-scale editorial</h3>
       <p>From flagship launches to always-on presence, across owned, earned, shared, and paid: editorial craft, multimedia, press relations, performance media. Engineered for human readers and answer engines alike.</p>
     </div>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">04 · Measurement</span>
       <h3>Measurement &amp; memory</h3>
       <p>Evaluation on the AMEC chain: outputs to outcomes to impact, never AVEs. And the learning is captured, not lost: a knowledge base your institution keeps when the engagement ends.</p>
     </div>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">05 · Capacity</span>
       <h3>Handoff &amp; coaching</h3>
       <p>I build capability, not dependency. Teams trained, workflows documented, communicators coached until the infrastructure is entirely theirs to run.</p>
     </div>
-    <div class="svc">
+    <div class="svc rv-self">
       <span class="cap">The rail · Systems</span>
       <h3>AI-native workflows</h3>
       <p>The rail under all five: secure, private LLM environments, automated pipelines, machine learning where the data justifies it. The systems power the work; the judgment stays human.</p>
@@ -319,7 +329,7 @@
         <span class="cap case-cap">Strategy · Multi-channel delivery · Measurable impact</span>
         <p>When I arrived at WMO, total following sat around 200,000. Four years later it broke 1.3 million. No accident. We shut off the institutional noise, moved the weight to LinkedIn where the policymakers actually are, and built a content machine a small team could run.</p>
         <p>The deeper win was framing. #StateOfClimate skewed negative and jargon-bound, and doom loses to benefit, security, and agency every time. I partnered with climate scientist Ed Hawkins to put his warming stripes at the heart of the visual story. Mentions rose 661%, at 4.6% engagement against a 2 to 3% sector benchmark.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>RESULT</b>200,000 → 1.3M followers, all channels, four years</div>
           <div><b>CONTEXT</b>#StateOfClimate mentions +661% · engagement 4.6% vs 2–3% benchmark</div>
           <div><b>VERIFIED</b>WMO digital analytics · retrievable on request</div>
@@ -339,7 +349,7 @@
         <span class="cap case-cap">Community strategy · Social intelligence · ROI discipline</span>
         <p>The one-way broadcast is over. I led WMO's shift from broadcast model to community model, and the data held up: inbound messages up 600%, engagement growth (+117.7%) outpacing impression growth (+94.1%). Everyone wants to go viral. Almost nobody connects. You hit a moving audience with consistency, not stunts.</p>
         <p>I also put a number on the function itself: the channel portfolio valued at roughly USD 6.4 million in CPA, CPC, and CPM terms. Communication defended in the language executives actually use.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>RESULT</b>inbound +600% · engagement +117.7% vs impressions +94.1%</div>
           <div><b>VALUATION</b>~USD 6.4M channel portfolio, market replacement cost</div>
           <div><b>VERIFIED</b>2025 reporting cycle · retrievable on request</div>
@@ -358,7 +368,7 @@
         <span class="cap case-cap">Emergency preparedness · Human-centered storytelling · Multi-agency orchestration</span>
         <p>Early Warnings for All is the UN mandate to protect every person on Earth with early warning systems by 2027. When we took it on, the conversation belonged to technical experts. The people who need those systems most were missing from it. We brought in storytelling: flags on beaches for fishers, radio bulletins, church bells. Within a year, mentions on X grew from 7.5 million to 80 million.</p>
         <p>I led communications across the task force with IFRC, UNDRR, and ITU, ran the CHF 200,000 campaign budget and its procurement, and got very large agencies behind one voice. Then we repeated it, everywhere, until it stuck.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>RESULT</b>7.5M → 80M mentions on X in one year (+951%)</div>
           <div><b>BUDGET</b>CHF 200,000 · procurement tender included</div>
           <div><b>TASK FORCE</b>WMO · IFRC · UNDRR · ITU</div>
@@ -388,7 +398,7 @@
         <span class="cap case-cap">Proposals · Donor relations · Budget stewardship</span>
         <p>Somebody has to win the money. At FSC I wrote the proposal that won IKEA's EUR 400,000 grant for the New Approaches smallholder certification project, then served as communications lead on the core team. At WMO I ran the CHF 200,000 Early Warnings for All budget, procurement tender included.</p>
         <p>Money arrives on a story and stays on the reporting. I've done both ends.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>GRANT</b>EUR 400,000 · IKEA · New Approaches to Smallholder Certification</div>
           <div><b>ROLE</b>proposal author · communications lead</div>
           <div><b>ALSO</b>CHF 200,000 EW4All budget · procurement tender</div>
@@ -407,7 +417,7 @@
         <span class="cap case-cap">AI product launch · Frontier-tech storytelling · Information integrity</span>
         <p>The knowledge was never missing. It was buried: thousands of PDFs, scattered webpages, files named final_final_v2, the world's authoritative climate intelligence hidden exactly when decisions needed it fast. AskWMO let you ask a question and get an answer drawn straight from WMO's document base. I co-created it and led the digital strategy and launch narrative.</p>
         <p>Access is also the integrity battle. When the right science is hard to reach, misinformation festers and disinformation wins. In 2024 I was one of four named recipients of the Royal Meteorological Society Award for Impact on Science, Policy or Society.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>AWARD</b>Royal Meteorological Society 2024 · Impact on Science, Policy or Society</div>
           <div><b>CONTEXT</b>part of the UN information-integrity initiative</div>
           <div><b>ROLE</b>co-created · digital strategy and launch narrative</div>
@@ -430,7 +440,7 @@
         <span class="cap case-cap">Executive communications · Speeches · Briefings</span>
         <p>The quietest work never posts. I drafted speeches and briefings for WMO's Assistant Secretary-General, wrote the briefing note to the Chief of Staff on climate information integrity, with the outcome public on wmo.int, and ran the UNICEF China Country Representative's personal platform. Leadership at every level, and the lesson is the same. Principals have a lot on their plate, so you make it an easy lift: build the trust, and get the information there on time and at quality.</p>
         <p>The right message from the right person at the right time saves lives.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>PRINCIPALS</b>WMO Assistant Secretary-General · Chief of Staff · UNICEF China Country Representative · campaign leadership</div>
           <div><b>FORMATS</b>speeches · briefing notes · scenario notes · personal platforms</div>
           <div><b>DOCTRINE</b>easy lift · on time · at quality</div>
@@ -449,7 +459,7 @@
         <span class="cap case-cap">GEO / AEO · Applied AI · Two ecosystems</span>
         <p>Information behavior keeps migrating: card catalog, search engine, chatbot. Meeting people where they ask is the discipline; only the destination changed. So I built a complete GEO/AEO framework: content engineered for machine extraction, mapped to the off-site sources that actually feed the models, Western and Chinese AI ecosystems alike.</p>
         <p>And I build, not just advise. An autonomous agent produces my strategic brief every morning, on a defined voice and a strict budget. The judgment stays human. That part is not negotiable.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>FRAMEWORK</b>GEO/AEO · Western + Chinese AI ecosystems</div>
           <div><b>RUNNING</b>autonomous daily brief agent · human-in-the-loop supply chain</div>
         </div>
@@ -467,7 +477,7 @@
         <span class="cap case-cap">Training · Playbooks · Coaching &amp; enablement</span>
         <p>The highest form of communication leadership is making an organization capable of doing the work without you. I trained 30+ FSC national offices to run their own communications. At WMO I scaled a content operation across 30+ focal points with a federated model: regional posting authority inside central standards.</p>
         <p>The approach comes from the basketball court. Lift everyone, build on strengths, never the same mistake twice, then let people shine.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>FSC</b>30+ national offices, independent comms capability</div>
           <div><b>WMO</b>30+ focal points · federated model · central standards</div>
         </div>
@@ -485,7 +495,7 @@
         <span class="cap case-cap">Public-health behavior change · Crisis response · Knowledge infrastructure</span>
         <p>When COVID-19 emptied schools across China, the problem was changing behavior in a moment of panic. At UNICEF China I led Safe School Return, a public-health behavior-change campaign (C4D) built to replace parental fear with clarity. It won an award, and its assets were replicated by UNICEF offices far beyond China.</p>
         <p>A crisis also generates lessons faster than any organization can absorb them. Writing and synthesizing UNICEF's COVID-19 lessons learned is what pulled me into knowledge management. The hub I then co-designed served the whole organization: tools, templates, news, networking, everything KM, connecting 190 country offices. That one earned an Inspira Award.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>CAMPAIGN</b>Safe School Return · award-winning C4D · assets replicated globally</div>
           <div><b>INFRASTRUCTURE</b>UNICEF’s org-wide KM hub · 190 country offices · Inspira Award 2021</div>
         </div>
@@ -503,7 +513,7 @@
         <h3>Reports that refuse to die on a PDF</h3>
         <span class="cap case-cap">Editorial authority · Launch craft · Translating science</span>
         <p>A technical report is useless if it dies on a PDF. For WMO's State of Climate Services 2023: Health, we produced the organization's first video case study: one data point on heatwaves, a camera on outdoor workers in Greece, the number turned into someone's afternoon shift. For the recurring flagship moments I partnered with the European Space Agency to bring satellite imagery to life.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>FIRST</b>WMO's first video case study · State of Climate Services 2023: Health</div>
           <div><b>PARTNER</b>European Space Agency · Earth-observation imagery</div>
         </div>
@@ -529,7 +539,7 @@
         <span class="cap case-cap">Primo Insight 01 · Research · Climate finance</span>
         <p>Two trillion dollars a year, and a third of what is needed. I read the latest annual reports of the funds, the development banks, the donors and the philanthropies, more than fifty institutions, and wrote down what each one is standing on: the number, the edition it came from, and the trap in quoting it. Eleven pages, five charts, every figure sourced, the ones that could not be confirmed flagged as such.</p>
         <p>I built it because I always walk in having read the strategy. It is for anyone who has to put climate finance into public language, and I will keep it current.</p>
-        <div class="ledger">
+        <div class="ledger rv">
           <div><b>SCOPE</b>10 multilateral funds · 11 development banks · 11 bilateral providers · UN agencies, philanthropy, bonds, carbon, insurance</div>
           <div><b>EDITIONS</b>CPI Global Landscape 2026 · MDB joint report 2025 · OECD May 2026 · UNEP Adaptation Gap 2025</div>
           <div><b>VERIFIED</b>source and edition on every figure · unconfirmed items listed, not smoothed over</div>
@@ -663,6 +673,15 @@
       });
     }, { threshold: 0.6 });
     document.querySelectorAll('.focal[data-count]').forEach(el => io.observe(el));
+  }
+
+  // Scroll reveals: one observer, fires once per element, a little before it
+  // fully enters so the motion reads as arrival rather than a late pop.
+  if (document.documentElement.classList.contains('js')) {
+    const rv = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -13% 0px', threshold: 0 });
+    document.querySelectorAll('.rv,.rv-self').forEach(el => rv.observe(el));
   }
 
   // Close mobile menu on link tap
