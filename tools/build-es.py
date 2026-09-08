@@ -308,14 +308,20 @@ rep('English · Spanish, both native', 'Inglés · Español, ambos nativos')
 
 # ── contact ──
 rep('<h2>Bring me the mandate, the launch, or the mess.</h2>', '<h2>Tráigame el mandato, el lanzamiento o el desastre.</h2>')
-rep('<p>I read everything about your institution before the first call. English or Spanish. Pick the door and the email is half written.</p>',
-    '<p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. Elija la puerta y el correo ya está medio escrito.</p>')
-rep('?subject=The%20mandate&amp;body=The%20institution:%0AWhat%20it%20needs%20to%20be%20understood%20for:%0AWhen%20it%20matters:%0A%0A"><b>01</b>The mandate</a>',
-    '?subject=El%20mandato&amp;body=La%20instituci%C3%B3n:%0APara%20qu%C3%A9%20necesita%20hacerse%20entender:%0ACu%C3%A1ndo%20importa:%0A%0A"><b>01</b>El mandato</a>')
-rep('?subject=The%20launch&amp;body=What%20launches:%0AWhen:%0AWho%20has%20to%20notice:%0A%0A"><b>02</b>The launch</a>',
-    '?subject=El%20lanzamiento&amp;body=Qu%C3%A9%20se%20lanza:%0ACu%C3%A1ndo:%0AQui%C3%A9n%20tiene%20que%20enterarse:%0A%0A"><b>02</b>El lanzamiento</a>')
-rep('?subject=The%20mess&amp;body=What%20happened:%0AWhen%20it%20started:%0AWho%20knows%20so%20far:%0A%0A"><b>03</b>The mess</a>',
-    '?subject=El%20desastre&amp;body=Qu%C3%A9%20pas%C3%B3:%0ACu%C3%A1ndo%20empez%C3%B3:%0AQui%C3%A9n%20lo%20sabe%20hasta%20ahora:%0A%0A"><b>03</b>El desastre</a>')
+rep('<p>I read everything about your institution before the first call. English or Spanish. Pick a door and the email is half written.</p>',
+    '<p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. Elija una puerta y el correo ya está medio escrito.</p>')
+rep('<span class="door-t">The mandate</span>', '<span class="door-t">El mandato</span>')
+rep('<span class="door-h">The institution, what it needs to be understood for, and when it matters.</span>', '<span class="door-h">La institución, para qué necesita hacerse entender y cuándo importa.</span>')
+rep('?subject=The%20mandate&amp;body=The%20institution:%0AWhat%20it%20needs%20to%20be%20understood%20for:%0AWhen%20it%20matters:%0A%0A"',
+    '?subject=El%20mandato&amp;body=La%20instituci%C3%B3n:%0APara%20qu%C3%A9%20necesita%20hacerse%20entender:%0ACu%C3%A1ndo%20importa:%0A%0A"')
+rep('<span class="door-t">The launch</span>', '<span class="door-t">El lanzamiento</span>')
+rep('<span class="door-h">What launches, when, and who has to notice.</span>', '<span class="door-h">Qué se lanza, cuándo y quién tiene que enterarse.</span>')
+rep('?subject=The%20launch&amp;body=What%20launches:%0AWhen:%0AWho%20has%20to%20notice:%0A%0A"',
+    '?subject=El%20lanzamiento&amp;body=Qu%C3%A9%20se%20lanza:%0ACu%C3%A1ndo:%0AQui%C3%A9n%20tiene%20que%20enterarse:%0A%0A"')
+rep('<span class="door-t">The mess</span>', '<span class="door-t">El desastre</span>')
+rep('<span class="door-h">What happened, when it started, and who knows so far.</span>', '<span class="door-h">Qué pasó, cuándo empezó y quién lo sabe hasta ahora.</span>')
+rep('?subject=The%20mess&amp;body=What%20happened:%0AWhen%20it%20started:%0AWho%20knows%20so%20far:%0A%0A"',
+    '?subject=El%20desastre&amp;body=Qu%C3%A9%20pas%C3%B3:%0ACu%C3%A1ndo%20empez%C3%B3:%0AQui%C3%A9n%20lo%20sabe%20hasta%20ahora:%0A%0A"')
 rep('<p class="or">Or just write: ', '<p class="or">O simplemente escriba: ')
 
 # ── footer ──
