@@ -62,14 +62,13 @@
   img{max-width:100%;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);}
 
-  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:55px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 var(--s-lg);overflow-wrap:break-word;}
+  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,23.4px + 2.82vw,55px);line-height:1.15;letter-spacing:-0.01em;margin:0 0 var(--s-lg);overflow-wrap:break-word;}
   h3{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;line-height:1.25;margin:0;}
   .cap{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;line-height:1.615;letter-spacing:0.14em;text-transform:uppercase;}
   p{margin:0 0 var(--s-md);max-width:66ch;}
   p:last-child{margin-bottom:0;}
 
   @media(max-width:560px){
-    h2{font-size:34px;}
     .wrap{padding:0 var(--s-md);}
     .nav-inner,.footer-inner{padding:0 var(--s-md);}
   }
@@ -97,10 +96,18 @@
   .hero-top .cap{color:var(--muted);}
   .hero-meta{text-align:right;color:var(--muted);}
   .hero-lockup img{width:min(560px,80vw);height:auto;aspect-ratio:4853.2/2057.7;display:block;margin-bottom:var(--s-xl);}
-  .hero-rule{width:var(--s-2xl);height:2px;background:var(--green);margin-bottom:var(--s-lg);}
-  .hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:89px;line-height:1.1;letter-spacing:-0.015em;margin:0;max-width:11em;}
-  @media(max-width:860px){.hero h1{font-size:55px;}.hero-meta{display:none;}}
-  @media(max-width:560px){.hero h1{font-size:34px;}}
+  .hero-rule{width:var(--s-2xl);height:2px;background:var(--green);margin-bottom:var(--s-lg);transform-origin:left center;}
+  /* Kinetic hero — the house motion form (decelerate hard, land, hold) on load:
+     the Signal Green rule draws in from zero, then the headline settles from
+     Montserrat 400 to its 800 token on the variable axis. Final frame = the
+     static page; the .kinetic class is only added once the fonts are ready. */
+  .hero.kinetic .hero-rule{animation:rule-in .6s cubic-bezier(.16,1,.3,1) both;}
+  .hero.kinetic h1{animation:weight-in 1.4s cubic-bezier(.16,1,.3,1) .2s both;}
+  @keyframes rule-in{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+  @keyframes weight-in{0%{font-weight:400;opacity:0;}30%{opacity:1;}100%{font-weight:800;opacity:1;}}
+  @media(prefers-reduced-motion:reduce){.hero.kinetic .hero-rule,.hero.kinetic h1{animation:none;}}
+  .hero h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,6.3px + 7.38vw,89px);line-height:1.1;letter-spacing:-0.015em;margin:0;max-width:11em;}
+  @media(max-width:860px){.hero-meta{display:none;}}
 
   /* ══ BANDS ══ */
   .band{padding:var(--s-2xl) 0;}
@@ -130,7 +137,7 @@
   /* ══ WORK / CASES ══ */
   .case{display:grid;grid-template-columns:280px 1fr;gap:var(--s-xl);padding:var(--s-xl) 0;border-top:1px solid var(--green-deep);}
   .case.full{grid-template-columns:1fr;}
-  .focal{font-family:'Montserrat',sans-serif;font-weight:800;font-size:89px;line-height:1.05;color:var(--green-deep);letter-spacing:-0.02em;}
+  .focal{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(55px,37.9px + 4.56vw,89px);line-height:1.05;color:var(--green-deep);letter-spacing:-0.02em;}
   .focal-label{display:block;color:var(--surface);margin-top:var(--s-xs);letter-spacing:0.14em;}
   .case h3{margin-bottom:var(--s-xs);}
   .case .case-cap{color:var(--surface);display:block;margin-bottom:var(--s-md);}
@@ -141,7 +148,6 @@
   .case-links a{color:var(--green-deep);font-weight:500;border-bottom:1px solid var(--green-deep);margin-right:var(--s-md);}
   @media(max-width:860px){
     .case{grid-template-columns:1fr;gap:var(--s-md);}
-    .focal{font-size:55px;}
   }
 
   /* video */
@@ -626,6 +632,14 @@
     };
     requestAnimationFrame(frame);
   };
+  // Kinetic hero: arm the load animation only once the variable font is in,
+  // so the weight morph runs on Montserrat and never on the fallback face.
+  if (!reduced && document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      const ok = [...document.fonts].some(f => f.family === 'Montserrat' && f.status === 'loaded');
+      if (ok) document.getElementById('top').classList.add('kinetic');
+    });
+  }
   if (!reduced && 'IntersectionObserver' in window) {
     const seen = new WeakSet();
     const io = new IntersectionObserver(entries => {
