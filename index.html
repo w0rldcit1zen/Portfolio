@@ -170,6 +170,18 @@
     .case{grid-template-columns:1fr;gap:var(--s-md);}
   }
 
+  /* ══ CHARTS ══ — the emphasis form: the story bar in the light-ground accent,
+     the "before" bar in surface held back to 60% (3.9:1 on paper). Bars grow
+     from zero, 4px rounded at the data end, square at the baseline. Text wears
+     text tokens, never the series colour. The ledger below is the table view. */
+  .chart{margin:var(--s-md) 0 0;max-width:280px;}
+  .chart svg{display:block;width:100%;height:auto;overflow:visible;}
+  .chart .c-lab{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.08em;fill:var(--surface);}
+  .chart .c-val{font-family:var(--mono);font-size:13px;fill:var(--ink);}
+  .chart .c-on{fill:var(--green-deep);}
+  .chart .c-off{fill:var(--surface);fill-opacity:.6;}
+  .chart figcaption{font-family:var(--mono);font-size:13px;line-height:1.615;color:var(--surface);margin-top:var(--s-xs);}
+
   /* video */
   .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-md);margin-top:var(--s-md);}
   .video-single{max-width:640px;margin-top:var(--s-md);}
@@ -335,6 +347,14 @@
       <div>
         <div class="focal" data-count="1.3" data-decimals="1" data-suffix="M">1.3M</div>
         <span class="cap focal-label">Followers · four years</span>
+        <figure class="chart rv-self" aria-labelledby="ch-followers-t">
+          <svg viewBox="0 0 280 60" role="img" aria-labelledby="ch-followers-t">
+            <title id="ch-followers-t">Followers, all channels: 200,000 on arrival, 1.3 million four years later.</title>
+            <g><title>Arrival: 200K</title><text class="c-lab" x="0" y="11">ARRIVAL</text><g class="c-off"><path d="M0 16h33.1a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="45.1" y="23">200K</text></g>
+            <g><title>Four Years Later: 1.3M</title><text class="c-lab" x="0" y="45">FOUR YEARS LATER</text><g class="c-on"><path d="M0 50h237.0a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="249.0" y="57">1.3M</text></g>
+          </svg>
+          <figcaption>Source: WMO digital analytics</figcaption>
+        </figure>
       </div>
       <div>
         <h3>Audience growth at global scale</h3>
@@ -355,6 +375,14 @@
       <div>
         <div class="focal" data-count="600" data-prefix="+" data-suffix="%">+600%</div>
         <span class="cap focal-label">Inbound dialogue</span>
+        <figure class="chart rv-self" aria-labelledby="ch-community-t">
+          <svg viewBox="0 0 280 60" role="img" aria-labelledby="ch-community-t">
+            <title id="ch-community-t">Growth, 2025 reporting cycle: impressions up 94.1 percent, engagement up 117.7 percent.</title>
+            <g><title>Impressions: +94.1%</title><text class="c-lab" x="0" y="11">IMPRESSIONS</text><g class="c-off"><path d="M0 16h169.5a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="181.5" y="23">+94.1%</text></g>
+            <g><title>Engagement: +117.7%</title><text class="c-lab" x="0" y="45">ENGAGEMENT</text><g class="c-on"><path d="M0 50h213.0a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="225.0" y="57">+117.7%</text></g>
+          </svg>
+          <figcaption>Source: 2025 reporting cycle</figcaption>
+        </figure>
       </div>
       <div>
         <h3>From broadcast to community</h3>
@@ -374,6 +402,14 @@
       <div>
         <div class="focal" data-count="80" data-suffix="M">80M</div>
         <span class="cap focal-label">Mentions · one year</span>
+        <figure class="chart rv-self" aria-labelledby="ch-mentions-t">
+          <svg viewBox="0 0 280 60" role="img" aria-labelledby="ch-mentions-t">
+            <title id="ch-mentions-t">Mentions on X: 7.5 million before the campaign, 80 million one year later.</title>
+            <g><title>Before: 7.5M</title><text class="c-lab" x="0" y="11">BEFORE</text><g class="c-off"><path d="M0 16h18.6a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="30.6" y="23">7.5M</text></g>
+            <g><title>One Year Later: 80M</title><text class="c-lab" x="0" y="45">ONE YEAR LATER</text><g class="c-on"><path d="M0 50h237.0a4 4 0 0 1 0 8H0z"/></g><text class="c-val" x="249.0" y="57">80M</text></g>
+          </svg>
+          <figcaption>Source: on request</figcaption>
+        </figure>
       </div>
       <div>
         <h3>Changing the conversation</h3>
