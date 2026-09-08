@@ -286,12 +286,6 @@
   .contact p{color:var(--muted);}
   .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
   .btn:hover{background:var(--paper);color:var(--ink);}
-  /* Three doors — the headline names them; each prefills the subject and a
-     three-line intake so the first email already says which conversation it is. */
-  .doors{display:flex;flex-wrap:wrap;gap:var(--s-sm);margin-top:var(--s-lg);}
-  .doors .btn{margin-top:0;}
-  .doors .btn b{font-weight:600;color:var(--green);margin-right:var(--s-xs);}
-  .doors .btn:hover b{color:var(--green-deep);}
   .contact .or{font-size:13px;line-height:1.615;color:var(--muted);margin-top:var(--s-md);}
   .contact .or a{color:var(--green);border-bottom:1px solid var(--green);}
 
@@ -299,7 +293,7 @@
      followed by its address. The light lockup replaces the dark one. */
   .hero-lockup .on-light{display:none;}
   @media print{
-    .nav,.skip,.play-btn,.hero-meta,.doors{display:none!important;}
+    .nav,.skip,.play-btn,.hero-meta,.btn{display:none!important;}
     .hero-lockup .on-dark{display:none!important;} .hero-lockup .on-light{display:block!important;}
     body{background:#fff;color:#000;font-size:11pt;line-height:1.5;}
     .hero,.band,.band.dark,.band.parchment,.contact,.footer{background:#fff!important;color:#000!important;padding:var(--s-lg) 0;}
@@ -750,12 +744,8 @@
   <div class="wrap">
     <div class="hero-rule"></div>
     <h2>Bring me the mandate, the launch, or the mess.</h2>
-    <p>I read everything about your institution before the first call. English or Spanish. Pick the door and the email is half written.</p>
-    <div class="doors">
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mandate%3A%20%5Binstitution%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AOur%20mandate%2C%20in%20one%20line%3A%20%5Bwhat%20the%20institution%20exists%20to%20do%5D.%20The%20people%20we%20most%20need%20to%20reach%20are%20%5Bpolicymakers%20/%20the%20public%20/%20a%20specific%20community%5D%2C%20and%20right%20now%20%5Bwhat%20they%20see%20instead%2C%20or%20where%20recognition%20stalls%5D.%0D%0A%0D%0AWhat%20we%20need%3A%20%5Bstrategy%20/%20a%20campaign%20/%20a%20standing%20editorial%20function%20/%20measurement%20/%20a%20crisis%20plan%20built%20in%20advance%5D.%0D%0A%0D%0ATiming%3A%20%5Bwhen%20this%20matters%5D.%20Budget%20range%2C%20if%20there%20is%20one%3A%20%5B%20%5D.%0D%0A%0D%0ACould%20we%20talk%20this%20week%20or%20next%3F%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D%20and%20work%20in%20%5BEnglish%20/%20Spanish%5D.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>01</b>The mandate</a>
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20launch%3A%20%5Bwhat%20launches%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AWe%27re%20launching%20%5Breport%20/%20initiative%20/%20product%5D%20on%20%5Bdate%5D.%20The%20people%20who%20have%20to%20notice%20are%20%5Bministers%20/%20donors%20/%20journalists%20/%20the%20public%5D%2C%20and%20the%20message%20in%20one%20sentence%20is%20%5B%20%5D.%0D%0A%0D%0AAlready%20in%20place%3A%20%5Bassets%2C%20spokespeople%2C%20channels%5D.%20Still%20missing%3A%20%5B%20%5D.%0D%0A%0D%0ALanguages%3A%20%5B%20%5D.%20Budget%20range%2C%20if%20known%3A%20%5B%20%5D.%0D%0A%0D%0ACould%20we%20talk%20this%20week%3F%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>02</b>The launch</a>
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mess%3A%20%5Binstitution%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AWhat%20happened%2C%20plainly%3A%20%5Btwo%20sentences%5D.%20It%20started%20on%20%5Bdate%5D.%20So%20far%20it%20is%20known%20to%20%5Bstaff%20/%20partners%20/%20the%20press%20/%20the%20public%5D.%0D%0A%0D%0AWhat%20we%20have%20said%20publicly%3A%20%5Bnothing%20yet%20/%20a%20holding%20line%20/%20a%20full%20statement%5D.%0D%0A%0D%0AWhat%20we%20need%20first%3A%20%5Ba%20holding%20statement%20/%20a%20plan%20for%20the%20next%2048%20hours%20/%20someone%20in%20the%20room%5D.%0D%0A%0D%0APhone%3A%20%5B%20%5D.%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D.%20Sooner%20is%20better.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>03</b>The mess</a>
-    </div>
+    <p>I read everything about your institution before the first call. English or Spanish. The email opens half written; fill in the brackets.</p>
+    <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=Working%20with%20Primo%3A%20%5Binstitution%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AWhat%20I%27m%20bringing%20you%3A%20%5Bthe%20mandate%20/%20a%20launch%20/%20a%20mess%5D.%20In%20two%20sentences%3A%20%5Bwhat%20it%20is%2C%20and%20why%20now%5D.%0D%0A%0D%0AThe%20people%20we%20most%20need%20to%20reach%3A%20%5Bpolicymakers%20/%20the%20public%20/%20donors%20/%20the%20press%20/%20a%20specific%20community%5D.%20What%20they%20see%20today%20instead%3A%20%5B%20%5D.%0D%0A%0D%0AWhat%20we%20need%20first%3A%20%5Bstrategy%20/%20a%20campaign%20/%20a%20standing%20editorial%20function%20/%20measurement%20/%20a%20crisis%20plan%20/%20someone%20in%20the%20room%5D.%0D%0A%0D%0ATiming%3A%20%5Bwhen%20this%20matters%5D.%20Budget%20range%2C%20if%20there%20is%20one%3A%20%5B%20%5D.%0D%0A%0D%0ACould%20we%20talk%20this%20week%20or%20next%3F%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D%20and%20work%20in%20%5BEnglish%20/%20Spanish%5D.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D">Start a conversation</a>
     <p class="or">Or just write: <a href="mailto:primo.communication.io@gmail.com">primo.communication.io@gmail.com</a></p>
   </div>
 </section>

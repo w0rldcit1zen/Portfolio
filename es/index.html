@@ -286,12 +286,6 @@
   .contact p{color:var(--muted);}
   .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
   .btn:hover{background:var(--paper);color:var(--ink);}
-  /* Three doors — the headline names them; each prefills the subject and a
-     three-line intake so the first email already says which conversation it is. */
-  .doors{display:flex;flex-wrap:wrap;gap:var(--s-sm);margin-top:var(--s-lg);}
-  .doors .btn{margin-top:0;}
-  .doors .btn b{font-weight:600;color:var(--green);margin-right:var(--s-xs);}
-  .doors .btn:hover b{color:var(--green-deep);}
   .contact .or{font-size:13px;line-height:1.615;color:var(--muted);margin-top:var(--s-md);}
   .contact .or a{color:var(--green);border-bottom:1px solid var(--green);}
 
@@ -299,7 +293,7 @@
      followed by its address. The light lockup replaces the dark one. */
   .hero-lockup .on-light{display:none;}
   @media print{
-    .nav,.skip,.play-btn,.hero-meta,.doors{display:none!important;}
+    .nav,.skip,.play-btn,.hero-meta,.btn{display:none!important;}
     .hero-lockup .on-dark{display:none!important;} .hero-lockup .on-light{display:block!important;}
     body{background:#fff;color:#000;font-size:11pt;line-height:1.5;}
     .hero,.band,.band.dark,.band.parchment,.contact,.footer{background:#fff!important;color:#000!important;padding:var(--s-lg) 0;}
@@ -750,12 +744,8 @@
   <div class="wrap">
     <div class="hero-rule"></div>
     <h2>Tráigame el mandato, el lanzamiento o el desastre.</h2>
-    <p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. Elija la puerta y el correo ya está medio escrito.</p>
-    <div class="doors">
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20mandato%3A%20%5Binstituci%C3%B3n%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0ANuestro%20mandato%2C%20en%20una%20l%C3%ADnea%3A%20%5Bpara%20qu%C3%A9%20existe%20la%20instituci%C3%B3n%5D.%20Las%20personas%20a%20las%20que%20m%C3%A1s%20necesitamos%20llegar%20son%20%5Bquienes%20deciden%20/%20el%20p%C3%BAblico%20/%20una%20comunidad%20concreta%5D%2C%20y%20ahora%20mismo%20%5Bqu%C3%A9%20ven%20en%20su%20lugar%2C%20o%20d%C3%B3nde%20se%20estanca%20el%20reconocimiento%5D.%0D%0A%0D%0ALo%20que%20necesitamos%3A%20%5Bestrategia%20/%20una%20campa%C3%B1a%20/%20una%20funci%C3%B3n%20editorial%20permanente%20/%20medici%C3%B3n%20/%20un%20plan%20de%20crisis%20preparado%20de%20antemano%5D.%0D%0A%0D%0APlazos%3A%20%5Bcu%C3%A1ndo%20importa%20esto%5D.%20Rango%20de%20presupuesto%2C%20si%20lo%20hay%3A%20%5B%20%5D.%0D%0A%0D%0A%C2%BFPodr%C3%ADamos%20hablar%20esta%20semana%20o%20la%20pr%C3%B3xima%3F%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D%20y%20trabajo%20en%20%5Bespa%C3%B1ol%20/%20ingl%C3%A9s%5D.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>01</b>El mandato</a>
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20lanzamiento%3A%20%5Bqu%C3%A9%20se%20lanza%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0ALanzamos%20%5Binforme%20/%20iniciativa%20/%20producto%5D%20el%20%5Bfecha%5D.%20Quienes%20tienen%20que%20enterarse%20son%20%5Bministros%20/%20donantes%20/%20periodistas%20/%20el%20p%C3%BAblico%5D%2C%20y%20el%20mensaje%20en%20una%20frase%20es%20%5B%20%5D.%0D%0A%0D%0AYa%20tenemos%3A%20%5Bmateriales%2C%20portavoces%2C%20canales%5D.%20Nos%20falta%3A%20%5B%20%5D.%0D%0A%0D%0AIdiomas%3A%20%5B%20%5D.%20Rango%20de%20presupuesto%2C%20si%20se%20conoce%3A%20%5B%20%5D.%0D%0A%0D%0A%C2%BFPodr%C3%ADamos%20hablar%20esta%20semana%3F%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>02</b>El lanzamiento</a>
-      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20desastre%3A%20%5Binstituci%C3%B3n%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0AQu%C3%A9%20pas%C3%B3%2C%20sin%20rodeos%3A%20%5Bdos%20frases%5D.%20Empez%C3%B3%20el%20%5Bfecha%5D.%20Hasta%20ahora%20lo%20saben%20%5Bel%20personal%20/%20los%20socios%20/%20la%20prensa%20/%20el%20p%C3%BAblico%5D.%0D%0A%0D%0AQu%C3%A9%20hemos%20dicho%20p%C3%BAblicamente%3A%20%5Bnada%20todav%C3%ADa%20/%20una%20l%C3%ADnea%20de%20contenci%C3%B3n%20/%20una%20declaraci%C3%B3n%20completa%5D.%0D%0A%0D%0AQu%C3%A9%20necesitamos%20primero%3A%20%5Buna%20declaraci%C3%B3n%20de%20contenci%C3%B3n%20/%20un%20plan%20para%20las%20pr%C3%B3ximas%2048%20horas%20/%20alguien%20en%20la%20sala%5D.%0D%0A%0D%0ATel%C3%A9fono%3A%20%5B%20%5D.%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D.%20Cuanto%20antes%2C%20mejor.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>03</b>El desastre</a>
-    </div>
+    <p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. El correo se abre medio escrito; rellene los corchetes.</p>
+    <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=Trabajar%20con%20Primo%3A%20%5Binstituci%C3%B3n%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0ALo%20que%20le%20traigo%3A%20%5Bel%20mandato%20/%20un%20lanzamiento%20/%20un%20desastre%5D.%20En%20dos%20frases%3A%20%5Bqu%C3%A9%20es%20y%20por%20qu%C3%A9%20ahora%5D.%0D%0A%0D%0ALas%20personas%20a%20las%20que%20m%C3%A1s%20necesitamos%20llegar%3A%20%5Bquienes%20deciden%20/%20el%20p%C3%BAblico%20/%20donantes%20/%20la%20prensa%20/%20una%20comunidad%20concreta%5D.%20Lo%20que%20ven%20hoy%20en%20su%20lugar%3A%20%5B%20%5D.%0D%0A%0D%0ALo%20que%20necesitamos%20primero%3A%20%5Bestrategia%20/%20una%20campa%C3%B1a%20/%20una%20funci%C3%B3n%20editorial%20permanente%20/%20medici%C3%B3n%20/%20un%20plan%20de%20crisis%20/%20alguien%20en%20la%20sala%5D.%0D%0A%0D%0APlazos%3A%20%5Bcu%C3%A1ndo%20importa%20esto%5D.%20Rango%20de%20presupuesto%2C%20si%20lo%20hay%3A%20%5B%20%5D.%0D%0A%0D%0A%C2%BFPodr%C3%ADamos%20hablar%20esta%20semana%20o%20la%20pr%C3%B3xima%3F%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D%20y%20trabajo%20en%20%5Bespa%C3%B1ol%20/%20ingl%C3%A9s%5D.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D">Empezar una conversación</a>
     <p class="or">O simplemente escriba: <a href="mailto:primo.communication.io@gmail.com">primo.communication.io@gmail.com</a></p>
   </div>
 </section>
