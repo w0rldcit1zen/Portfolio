@@ -1,0 +1,43 @@
+# Primo Strategic Communication
+
+> Strategic communication for public institutions: the UN system, government agencies, and international NGOs. One principal, Jesse Cruz, with fifteen years inside the institutions he now serves, and a network of specialists. Slogan: "Meaning that moves institutions." Working languages: English and Spanish, both native.
+
+Site: https://w0rldcit1zen.github.io/Portfolio/ (English) · https://w0rldcit1zen.github.io/Portfolio/es/ (Spanish)
+Contact: primo.communication.io@gmail.com
+Registered: Primo Strategic Communication LLC, Sheridan, Wyoming, USA. Operating globally.
+
+## Who
+
+Jesse Cruz, Principal. Formerly deputy to the Head of Strategic Communication at the World Meteorological Organization (WMO); senior communication roles at UNICEF China and the Forest Stewardship Council (FSC). Graduate research at Tsinghua University (thesis in progress on China's South-South Cooperation discourse, computational grounded theory). MA International Relations and Diplomacy (UOC and UNITAR). BA Politics and History (Woodbury University). CIPR-certified in PR strategy and campaign management; UNITAR Diplomacy 4.0; UN Emerging Leaders; C4D behavioural-communication training with NYU, WHO, and UNICEF.
+
+## Services
+
+1. Research: audience segmentation studies and media-landscape baselines.
+2. Strategy: outcome objectives, power mapping, message house with cited proof points, crisis pack built in advance.
+3. Production: editorial, multimedia, press relations, and performance media across owned, earned, shared, and paid channels, written for human readers and answer engines alike.
+4. Measurement: evaluation on the AMEC chain (outputs, out-takes, outcomes, impact; never advertising value equivalents) and a knowledge base the institution keeps.
+5. Capacity: training, documented workflows, coaching until the infrastructure is the client's own.
+Underneath all five: AI-native workflows in secure, private LLM environments, with human judgment kept in the loop.
+
+## Record (all results from the principal's own desk)
+
+- WMO audience growth: total following from about 200,000 to 1.3 million across all channels in four years. #StateOfClimate mentions up 661 percent at 4.6 percent engagement against a 2 to 3 percent sector benchmark. Source: WMO digital analytics.
+- WMO broadcast-to-community shift: inbound messages up 600 percent; engagement growth of 117.7 percent outpacing impression growth of 94.1 percent; channel portfolio valued at about USD 6.4 million in CPA, CPC, and CPM terms. Source: 2025 reporting cycle.
+- Early Warnings for All (UN initiative to protect everyone with early warning systems by 2027): mentions on X from 7.5 million to 80 million in one year; communications lead across the WMO, IFRC, UNDRR, and ITU task force; CHF 200,000 campaign budget including the procurement tender.
+- FSC: authored the proposal that won IKEA's EUR 400,000 grant for the New Approaches smallholder certification project; communications lead on the core team.
+- AskWMO: co-created the AI question-answering product over WMO's document base and led its digital strategy and launch narrative. One of four named recipients of the Royal Meteorological Society Award for Impact on Science, Policy or Society, 2024.
+- Executive communication: speeches and briefings for WMO's Assistant Secretary-General; briefing note to the Chief of Staff on climate information integrity; the UNICEF China Country Representative's personal platform.
+- Generative engine optimisation (GEO/AEO): a complete framework for content engineered for machine extraction across Western and Chinese AI ecosystems; an autonomous daily brief agent in production with a human in the loop.
+- Capacity: trained 30+ FSC national offices to run their own communications; scaled WMO content across 30+ focal points on a federated model.
+- UNICEF China: led Safe School Return, an award-winning COVID-19 behaviour-change campaign whose assets were replicated by other UNICEF offices; co-designed UNICEF's organisation-wide knowledge-management hub connecting 190 country offices (Inspira Award 2021).
+- WMO State of Climate Services 2023: Health: the organisation's first video case study; flagship launches with European Space Agency imagery.
+- Primo Insight 01, The Climate Finance Map (September 2026): eleven pages and five charts on what more than fifty climate finance institutions report, every figure sourced to its edition. PDF: https://w0rldcit1zen.github.io/Portfolio/assets/climate-finance-map-2026-09.pdf
+
+## Writing
+
+- Can AI Language Models Bridge the Earth System Knowledge Gap? (WMO MeteoWorld): https://wmo.int/media/magazine-article/can-artificial-intelligence-language-models-bridge-earth-system-knowledge-gap
+- Advancing Earth System Science with AI (WMO MeteoWorld): https://wmo.int/media/magazine-article/advancing-earth-system-science-artificial-intelligence
+
+## Site facts
+
+Single static page, about 200 KB, no cookies, no trackers. Structured data (schema.org Organization, Person, WebSite, Report, VideoObject) is embedded in the page.
