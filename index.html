@@ -180,6 +180,14 @@
   .contact p{color:var(--muted);}
   .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
   .btn:hover{background:var(--paper);color:var(--ink);}
+  /* Three doors — the headline names them; each prefills the subject and a
+     three-line intake so the first email already says which conversation it is. */
+  .doors{display:flex;flex-wrap:wrap;gap:var(--s-sm);margin-top:var(--s-lg);}
+  .doors .btn{margin-top:0;}
+  .doors .btn b{font-weight:600;color:var(--green);margin-right:var(--s-xs);}
+  .doors .btn:hover b{color:var(--green-deep);}
+  .contact .or{font-size:13px;line-height:1.615;color:var(--muted);margin-top:var(--s-md);}
+  .contact .or a{color:var(--green);border-bottom:1px solid var(--green);}
 
   /* ══ FOOTER ══ */
   .footer{background:var(--ink);color:var(--muted);padding:var(--s-lg) 0;border-top:1px solid var(--surface);}
@@ -586,8 +594,13 @@
   <div class="wrap">
     <div class="hero-rule"></div>
     <h2>Bring me the mandate, the launch, or the mess.</h2>
-    <p>I read everything about your institution before the first call. English or Spanish.</p>
-    <a class="btn" href="mailto:primo.communication.io@gmail.com">Start a conversation</a>
+    <p>I read everything about your institution before the first call. English or Spanish. Pick the door and the email is half written.</p>
+    <div class="doors">
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mandate&amp;body=The%20institution:%0AWhat%20it%20needs%20to%20be%20understood%20for:%0AWhen%20it%20matters:%0A%0A"><b>01</b>The mandate</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20launch&amp;body=What%20launches:%0AWhen:%0AWho%20has%20to%20notice:%0A%0A"><b>02</b>The launch</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mess&amp;body=What%20happened:%0AWhen%20it%20started:%0AWho%20knows%20so%20far:%0A%0A"><b>03</b>The mess</a>
+    </div>
+    <p class="or">Or just write: <a href="mailto:primo.communication.io@gmail.com">primo.communication.io@gmail.com</a></p>
   </div>
 </section>
 
