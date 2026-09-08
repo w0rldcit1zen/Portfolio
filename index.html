@@ -174,10 +174,8 @@
   .nav-links a.cap:hover{color:var(--paper);}
   .nav-links a.cap{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:8px;transition:color .2s,text-decoration-color .2s;}
   .nav-links a.cap.on{color:var(--paper);text-decoration-color:var(--green);}
-  .nav-cta{background:var(--paper);color:var(--ink)!important;padding:9px 21px;border-radius:2px;text-transform:none;letter-spacing:0;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:background .2s;}
-  .nav-cta::after{content:"→";transition:transform .2s;}
-  .nav-cta:hover{background:var(--parchment);color:var(--ink)!important;}
-  .nav-cta:hover::after{transform:translateX(4px);}
+  .nav-cta{border:1px solid var(--paper);color:var(--paper)!important;padding:9px 21px;border-radius:2px;}
+  .nav-cta:hover{background:var(--paper);color:var(--ink)!important;}
   .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
   @media(max-width:860px){
     .nav-links{display:none;}
@@ -286,18 +284,14 @@
   .contact{background:var(--ink);color:var(--paper);padding:var(--s-2xl) 0;}
   .contact .hero-rule{margin-bottom:var(--s-lg);}
   .contact p{color:var(--muted);}
-  /* Three doors — rows, not buttons, the same grammar as the services list.
-     Each prefills the subject and a three-line intake; the hint says what
-     the email will ask, and the arrow moves on hover. */
-  .doors{margin-top:var(--s-lg);border-top:1px solid var(--green);max-width:40em;}
-  .door{display:grid;grid-template-columns:var(--s-xl) 1fr auto;column-gap:var(--s-md);align-items:baseline;padding:var(--s-md) 0;border-bottom:1px solid var(--green);color:var(--paper);}
-  .door-n{grid-column:1;grid-row:1;color:var(--green);}
-  .door-t{grid-column:2;grid-row:1;font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;line-height:1.25;}
-  .door-h{grid-column:2;grid-row:2;font-size:13px;line-height:1.615;color:var(--muted);margin-top:4px;transition:color .2s;}
-  .door-a{grid-column:3;grid-row:1 / span 2;align-self:center;font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;color:var(--paper);transition:transform .25s cubic-bezier(.16,1,.3,1);}
-  @media(max-width:560px){.door{grid-template-columns:var(--s-lg) 1fr auto;column-gap:var(--s-sm);}}
-  .door:hover .door-a{transform:translateX(8px);}
-  .door:hover .door-h{color:var(--paper);}
+  .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
+  .btn:hover{background:var(--paper);color:var(--ink);}
+  /* Three doors — the headline names them; each prefills the subject and a
+     three-line intake so the first email already says which conversation it is. */
+  .doors{display:flex;flex-wrap:wrap;gap:var(--s-sm);margin-top:var(--s-lg);}
+  .doors .btn{margin-top:0;}
+  .doors .btn b{font-weight:600;color:var(--green);margin-right:var(--s-xs);}
+  .doors .btn:hover b{color:var(--green-deep);}
   .contact .or{font-size:13px;line-height:1.615;color:var(--muted);margin-top:var(--s-md);}
   .contact .or a{color:var(--green);border-bottom:1px solid var(--green);}
 
@@ -756,11 +750,11 @@
   <div class="wrap">
     <div class="hero-rule"></div>
     <h2>Bring me the mandate, the launch, or the mess.</h2>
-    <p>I read everything about your institution before the first call. English or Spanish. Pick a door and the email is half written.</p>
+    <p>I read everything about your institution before the first call. English or Spanish. Pick the door and the email is half written.</p>
     <div class="doors">
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=The%20mandate&amp;body=The%20institution:%0AWhat%20it%20needs%20to%20be%20understood%20for:%0AWhen%20it%20matters:%0A%0A"><span class="cap door-n">01</span><span class="door-t">The mandate</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">The institution, what it needs to be understood for, and when it matters.</span></a>
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=The%20launch&amp;body=What%20launches:%0AWhen:%0AWho%20has%20to%20notice:%0A%0A"><span class="cap door-n">02</span><span class="door-t">The launch</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">What launches, when, and who has to notice.</span></a>
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=The%20mess&amp;body=What%20happened:%0AWhen%20it%20started:%0AWho%20knows%20so%20far:%0A%0A"><span class="cap door-n">03</span><span class="door-t">The mess</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">What happened, when it started, and who knows so far.</span></a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mandate%3A%20%5Binstitution%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AOur%20mandate%2C%20in%20one%20line%3A%20%5Bwhat%20the%20institution%20exists%20to%20do%5D.%20The%20people%20we%20most%20need%20to%20reach%20are%20%5Bpolicymakers%20/%20the%20public%20/%20a%20specific%20community%5D%2C%20and%20right%20now%20%5Bwhat%20they%20see%20instead%2C%20or%20where%20recognition%20stalls%5D.%0D%0A%0D%0AWhat%20we%20need%3A%20%5Bstrategy%20/%20a%20campaign%20/%20a%20standing%20editorial%20function%20/%20measurement%20/%20a%20crisis%20plan%20built%20in%20advance%5D.%0D%0A%0D%0ATiming%3A%20%5Bwhen%20this%20matters%5D.%20Budget%20range%2C%20if%20there%20is%20one%3A%20%5B%20%5D.%0D%0A%0D%0ACould%20we%20talk%20this%20week%20or%20next%3F%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D%20and%20work%20in%20%5BEnglish%20/%20Spanish%5D.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>01</b>The mandate</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20launch%3A%20%5Bwhat%20launches%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AWe%27re%20launching%20%5Breport%20/%20initiative%20/%20product%5D%20on%20%5Bdate%5D.%20The%20people%20who%20have%20to%20notice%20are%20%5Bministers%20/%20donors%20/%20journalists%20/%20the%20public%5D%2C%20and%20the%20message%20in%20one%20sentence%20is%20%5B%20%5D.%0D%0A%0D%0AAlready%20in%20place%3A%20%5Bassets%2C%20spokespeople%2C%20channels%5D.%20Still%20missing%3A%20%5B%20%5D.%0D%0A%0D%0ALanguages%3A%20%5B%20%5D.%20Budget%20range%2C%20if%20known%3A%20%5B%20%5D.%0D%0A%0D%0ACould%20we%20talk%20this%20week%3F%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>02</b>The launch</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=The%20mess%3A%20%5Binstitution%5D&amp;body=Hello%20Jesse%2C%0D%0A%0D%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Binstitution%5D.%0D%0A%0D%0AWhat%20happened%2C%20plainly%3A%20%5Btwo%20sentences%5D.%20It%20started%20on%20%5Bdate%5D.%20So%20far%20it%20is%20known%20to%20%5Bstaff%20/%20partners%20/%20the%20press%20/%20the%20public%5D.%0D%0A%0D%0AWhat%20we%20have%20said%20publicly%3A%20%5Bnothing%20yet%20/%20a%20holding%20line%20/%20a%20full%20statement%5D.%0D%0A%0D%0AWhat%20we%20need%20first%3A%20%5Ba%20holding%20statement%20/%20a%20plan%20for%20the%20next%2048%20hours%20/%20someone%20in%20the%20room%5D.%0D%0A%0D%0APhone%3A%20%5B%20%5D.%20I%27m%20in%20%5Bcity%20/%20time%20zone%5D.%20Sooner%20is%20better.%0D%0A%0D%0A%5BName%5D%0D%0A%5BTitle%2C%20institution%5D"><b>03</b>The mess</a>
     </div>
     <p class="or">Or just write: <a href="mailto:primo.communication.io@gmail.com">primo.communication.io@gmail.com</a></p>
   </div>

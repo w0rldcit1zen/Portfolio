@@ -174,10 +174,8 @@
   .nav-links a.cap:hover{color:var(--paper);}
   .nav-links a.cap{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:8px;transition:color .2s,text-decoration-color .2s;}
   .nav-links a.cap.on{color:var(--paper);text-decoration-color:var(--green);}
-  .nav-cta{background:var(--paper);color:var(--ink)!important;padding:9px 21px;border-radius:2px;text-transform:none;letter-spacing:0;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:background .2s;}
-  .nav-cta::after{content:"→";transition:transform .2s;}
-  .nav-cta:hover{background:var(--parchment);color:var(--ink)!important;}
-  .nav-cta:hover::after{transform:translateX(4px);}
+  .nav-cta{border:1px solid var(--paper);color:var(--paper)!important;padding:9px 21px;border-radius:2px;}
+  .nav-cta:hover{background:var(--paper);color:var(--ink)!important;}
   .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
   @media(max-width:860px){
     .nav-links{display:none;}
@@ -286,18 +284,14 @@
   .contact{background:var(--ink);color:var(--paper);padding:var(--s-2xl) 0;}
   .contact .hero-rule{margin-bottom:var(--s-lg);}
   .contact p{color:var(--muted);}
-  /* Three doors — rows, not buttons, the same grammar as the services list.
-     Each prefills the subject and a three-line intake; the hint says what
-     the email will ask, and the arrow moves on hover. */
-  .doors{margin-top:var(--s-lg);border-top:1px solid var(--green);max-width:40em;}
-  .door{display:grid;grid-template-columns:var(--s-xl) 1fr auto;column-gap:var(--s-md);align-items:baseline;padding:var(--s-md) 0;border-bottom:1px solid var(--green);color:var(--paper);}
-  .door-n{grid-column:1;grid-row:1;color:var(--green);}
-  .door-t{grid-column:2;grid-row:1;font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;line-height:1.25;}
-  .door-h{grid-column:2;grid-row:2;font-size:13px;line-height:1.615;color:var(--muted);margin-top:4px;transition:color .2s;}
-  .door-a{grid-column:3;grid-row:1 / span 2;align-self:center;font-family:'Montserrat',sans-serif;font-weight:600;font-size:21px;color:var(--paper);transition:transform .25s cubic-bezier(.16,1,.3,1);}
-  @media(max-width:560px){.door{grid-template-columns:var(--s-lg) 1fr auto;column-gap:var(--s-sm);}}
-  .door:hover .door-a{transform:translateX(8px);}
-  .door:hover .door-h{color:var(--paper);}
+  .btn{display:inline-block;margin-top:var(--s-lg);border:1px solid var(--paper);color:var(--paper);padding:13px 34px;border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
+  .btn:hover{background:var(--paper);color:var(--ink);}
+  /* Three doors — the headline names them; each prefills the subject and a
+     three-line intake so the first email already says which conversation it is. */
+  .doors{display:flex;flex-wrap:wrap;gap:var(--s-sm);margin-top:var(--s-lg);}
+  .doors .btn{margin-top:0;}
+  .doors .btn b{font-weight:600;color:var(--green);margin-right:var(--s-xs);}
+  .doors .btn:hover b{color:var(--green-deep);}
   .contact .or{font-size:13px;line-height:1.615;color:var(--muted);margin-top:var(--s-md);}
   .contact .or a{color:var(--green);border-bottom:1px solid var(--green);}
 
@@ -756,11 +750,11 @@
   <div class="wrap">
     <div class="hero-rule"></div>
     <h2>Tráigame el mandato, el lanzamiento o el desastre.</h2>
-    <p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. Elija una puerta y el correo ya está medio escrito.</p>
+    <p>Leo todo sobre su institución antes de la primera llamada. En español o en inglés. Elija la puerta y el correo ya está medio escrito.</p>
     <div class="doors">
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=El%20mandato&amp;body=La%20instituci%C3%B3n:%0APara%20qu%C3%A9%20necesita%20hacerse%20entender:%0ACu%C3%A1ndo%20importa:%0A%0A"><span class="cap door-n">01</span><span class="door-t">El mandato</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">La institución, para qué necesita hacerse entender y cuándo importa.</span></a>
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=El%20lanzamiento&amp;body=Qu%C3%A9%20se%20lanza:%0ACu%C3%A1ndo:%0AQui%C3%A9n%20tiene%20que%20enterarse:%0A%0A"><span class="cap door-n">02</span><span class="door-t">El lanzamiento</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">Qué se lanza, cuándo y quién tiene que enterarse.</span></a>
-      <a class="door" href="mailto:primo.communication.io@gmail.com?subject=El%20desastre&amp;body=Qu%C3%A9%20pas%C3%B3:%0ACu%C3%A1ndo%20empez%C3%B3:%0AQui%C3%A9n%20lo%20sabe%20hasta%20ahora:%0A%0A"><span class="cap door-n">03</span><span class="door-t">El desastre</span><span class="door-a" aria-hidden="true">→</span><span class="door-h">Qué pasó, cuándo empezó y quién lo sabe hasta ahora.</span></a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20mandato%3A%20%5Binstituci%C3%B3n%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0ANuestro%20mandato%2C%20en%20una%20l%C3%ADnea%3A%20%5Bpara%20qu%C3%A9%20existe%20la%20instituci%C3%B3n%5D.%20Las%20personas%20a%20las%20que%20m%C3%A1s%20necesitamos%20llegar%20son%20%5Bquienes%20deciden%20/%20el%20p%C3%BAblico%20/%20una%20comunidad%20concreta%5D%2C%20y%20ahora%20mismo%20%5Bqu%C3%A9%20ven%20en%20su%20lugar%2C%20o%20d%C3%B3nde%20se%20estanca%20el%20reconocimiento%5D.%0D%0A%0D%0ALo%20que%20necesitamos%3A%20%5Bestrategia%20/%20una%20campa%C3%B1a%20/%20una%20funci%C3%B3n%20editorial%20permanente%20/%20medici%C3%B3n%20/%20un%20plan%20de%20crisis%20preparado%20de%20antemano%5D.%0D%0A%0D%0APlazos%3A%20%5Bcu%C3%A1ndo%20importa%20esto%5D.%20Rango%20de%20presupuesto%2C%20si%20lo%20hay%3A%20%5B%20%5D.%0D%0A%0D%0A%C2%BFPodr%C3%ADamos%20hablar%20esta%20semana%20o%20la%20pr%C3%B3xima%3F%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D%20y%20trabajo%20en%20%5Bespa%C3%B1ol%20/%20ingl%C3%A9s%5D.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>01</b>El mandato</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20lanzamiento%3A%20%5Bqu%C3%A9%20se%20lanza%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0ALanzamos%20%5Binforme%20/%20iniciativa%20/%20producto%5D%20el%20%5Bfecha%5D.%20Quienes%20tienen%20que%20enterarse%20son%20%5Bministros%20/%20donantes%20/%20periodistas%20/%20el%20p%C3%BAblico%5D%2C%20y%20el%20mensaje%20en%20una%20frase%20es%20%5B%20%5D.%0D%0A%0D%0AYa%20tenemos%3A%20%5Bmateriales%2C%20portavoces%2C%20canales%5D.%20Nos%20falta%3A%20%5B%20%5D.%0D%0A%0D%0AIdiomas%3A%20%5B%20%5D.%20Rango%20de%20presupuesto%2C%20si%20se%20conoce%3A%20%5B%20%5D.%0D%0A%0D%0A%C2%BFPodr%C3%ADamos%20hablar%20esta%20semana%3F%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>02</b>El lanzamiento</a>
+      <a class="btn" href="mailto:primo.communication.io@gmail.com?subject=El%20desastre%3A%20%5Binstituci%C3%B3n%5D&amp;body=Hola%2C%20Jesse%3A%0D%0A%0D%0ASoy%20%5Bnombre%5D%2C%20%5Bcargo%5D%20en%20%5Binstituci%C3%B3n%5D.%0D%0A%0D%0AQu%C3%A9%20pas%C3%B3%2C%20sin%20rodeos%3A%20%5Bdos%20frases%5D.%20Empez%C3%B3%20el%20%5Bfecha%5D.%20Hasta%20ahora%20lo%20saben%20%5Bel%20personal%20/%20los%20socios%20/%20la%20prensa%20/%20el%20p%C3%BAblico%5D.%0D%0A%0D%0AQu%C3%A9%20hemos%20dicho%20p%C3%BAblicamente%3A%20%5Bnada%20todav%C3%ADa%20/%20una%20l%C3%ADnea%20de%20contenci%C3%B3n%20/%20una%20declaraci%C3%B3n%20completa%5D.%0D%0A%0D%0AQu%C3%A9%20necesitamos%20primero%3A%20%5Buna%20declaraci%C3%B3n%20de%20contenci%C3%B3n%20/%20un%20plan%20para%20las%20pr%C3%B3ximas%2048%20horas%20/%20alguien%20en%20la%20sala%5D.%0D%0A%0D%0ATel%C3%A9fono%3A%20%5B%20%5D.%20Estoy%20en%20%5Bciudad%20/%20zona%20horaria%5D.%20Cuanto%20antes%2C%20mejor.%0D%0A%0D%0A%5BNombre%5D%0D%0A%5BCargo%2C%20instituci%C3%B3n%5D"><b>03</b>El desastre</a>
     </div>
     <p class="or">O simplemente escriba: <a href="mailto:primo.communication.io@gmail.com">primo.communication.io@gmail.com</a></p>
   </div>
