@@ -83,6 +83,14 @@
   .js .rv>*:nth-child(3){transition-delay:.178s;}
   .js .rv>*:nth-child(4){transition-delay:.267s;}
 
+  /* ══ ACCESS ══ — visible focus everywhere (currentColor holds contrast on
+     both grounds), a skip link that appears on first Tab, main as a landmark. */
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid currentColor;outline-offset:3px;}
+  .skip{position:absolute;left:var(--s-md);top:-100px;z-index:100;background:var(--paper);color:var(--ink);padding:var(--s-xs) var(--s-sm);border-radius:2px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
+  .skip:focus{top:var(--s-sm);}
+  main{display:block;}
+  main:focus{outline:none;}
+
   /* ══ NAV ══ */
   .nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid var(--surface);}
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-lg);height:68px;display:flex;align-items:center;justify-content:space-between;}
@@ -90,6 +98,8 @@
   .nav-links{display:flex;align-items:center;gap:var(--s-lg);}
   .nav-links a{color:var(--muted);transition:color .2s;}
   .nav-links a.cap:hover{color:var(--paper);}
+  .nav-links a.cap{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:8px;transition:color .2s,text-decoration-color .2s;}
+  .nav-links a.cap.on{color:var(--paper);text-decoration-color:var(--green);}
   .nav-cta{border:1px solid var(--paper);color:var(--paper)!important;padding:9px 21px;border-radius:2px;}
   .nav-cta:hover{background:var(--paper);color:var(--ink)!important;}
   .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
@@ -208,12 +218,13 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="#top"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></a>
-    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <button class="nav-toggle" id="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">☰</button>
     <div class="nav-links" id="navlinks">
       <a class="cap" href="#approach">Approach</a>
       <a class="cap" href="#services">What I do</a>
@@ -237,6 +248,7 @@
   </div>
 </header>
 
+<main id="main" tabindex="-1">
 <!-- ═══ POSITIONING ═══ -->
 <section class="band" id="approach">
   <div class="wrap">
@@ -247,7 +259,7 @@
 </section>
 
 <!-- ═══ PHILOSOPHY ═══ -->
-<section class="band dark">
+<section class="band dark" id="philosophy">
   <div class="wrap">
     <span class="cap eyebrow">Philosophy</span>
     <p class="lede">Communication is how strategy becomes real.</p>
@@ -376,11 +388,11 @@
         <div class="case-links"><a href="https://trello.com/b/aIf8BvHa/earlywarningsforall-campaign-assets-outreach" target="_blank" rel="noopener">Campaign assets on Trello →</a></div>
         <div class="video-grid">
           <div>
-            <div class="video-frame" data-yt="35FvB7lst6o" role="button" tabindex="0" aria-label="Play video: Early Warnings for All hero video"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/35FvB7lst6o/hqdefault.jpg" alt="Early Warnings for All hero video" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+            <div class="video-frame" data-yt="35FvB7lst6o" role="button" tabindex="0" aria-label="Play video: Early Warnings for All hero video"><img class="poster" src="assets/posters/35FvB7lst6o.webp" width="640" height="360" alt="Early Warnings for All hero video" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
             <p class="video-caption">The campaign hero video. <a href="https://www.youtube.com/watch?v=35FvB7lst6o" target="_blank" rel="noopener">Watch on YouTube →</a></p>
           </div>
           <div>
-            <div class="video-frame" data-yt="ZNY24cMkuh0" role="button" tabindex="0" aria-label="Play video: Early Warnings for All interview series"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/ZNY24cMkuh0/hqdefault.jpg" alt="Early Warnings for All interview series" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+            <div class="video-frame" data-yt="ZNY24cMkuh0" role="button" tabindex="0" aria-label="Play video: Early Warnings for All interview series"><img class="poster" src="assets/posters/ZNY24cMkuh0.webp" width="640" height="360" alt="Early Warnings for All interview series" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
             <p class="video-caption">On the ground, including in Spanish. <a href="https://www.youtube.com/watch?v=ZNY24cMkuh0" target="_blank" rel="noopener">Watch on YouTube →</a></p>
           </div>
         </div>
@@ -522,7 +534,7 @@
           <a href="https://www.facebook.com/reel/2866239786891608" target="_blank" rel="noopener">The ESA reel →</a>
         </div>
         <div class="video-single">
-          <div class="video-frame" data-yt="LTnXvG8FXRk" role="button" tabindex="0" aria-label="Play video: WMO State of Climate Services Health video case study"><img class="poster" onerror="this.style.display='none'" src="https://img.youtube.com/vi/LTnXvG8FXRk/hqdefault.jpg" alt="WMO State of Climate Services Health video case study" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
+          <div class="video-frame" data-yt="LTnXvG8FXRk" role="button" tabindex="0" aria-label="Play video: WMO State of Climate Services Health video case study"><img class="poster" src="assets/posters/LTnXvG8FXRk.webp" width="640" height="360" alt="WMO State of Climate Services Health video case study" loading="lazy"><span class="play-btn" aria-hidden="true"></span></div>
           <p class="video-caption">Story collecting in the field, Greece. <a href="https://www.youtube.com/watch?v=LTnXvG8FXRk" target="_blank" rel="noopener">Watch on YouTube →</a></p>
         </div>
       </div>
@@ -614,11 +626,13 @@
   </div>
 </section>
 
+</main>
+
 <!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <div class="footer-inner">
     <a href="#top"><img src="assets/primo-lockup-on-dark.svg" alt="Primo Strategic Communication"></a>
-    <div class="fine">Primo Strategic Communication LLC · Sheridan, Wyoming, USA · Operating globally · © 2026 · Meaning that moves institutions.</div>
+    <div class="fine">Primo Strategic Communication LLC · Sheridan, Wyoming, USA · Operating globally · © 2026 · Meaning that moves institutions.<br>This page weighs about 200 KB, sets no cookies, and runs no trackers.</div>
   </div>
 </footer>
 
@@ -684,10 +698,29 @@
     document.querySelectorAll('.rv,.rv-self').forEach(el => rv.observe(el));
   }
 
-  // Close mobile menu on link tap
-  document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => {
-    document.getElementById('navlinks').classList.remove('open');
-  }));
+  // Mobile menu: button state announced, Escape closes, link tap closes
+  const navToggle = document.getElementById('navtoggle'), navLinks = document.getElementById('navlinks');
+  const setNav = open => { navLinks.classList.toggle('open', open); navToggle.setAttribute('aria-expanded', String(open)); };
+  navToggle.addEventListener('click', () => setNav(!navLinks.classList.contains('open')));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && navLinks.classList.contains('open')) { setNav(false); navToggle.focus(); } });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+
+  // Scroll-spy: the section crossing the upper-middle of the viewport lights
+  // its nav link (paper text, Signal Green hairline). Bands with no link,
+  // philosophy and contact, clear it.
+  const spyLinks = [...navLinks.querySelectorAll('a.cap:not(.nav-cta)')];
+  const spySections = ['approach', 'philosophy', 'services', 'work', 'about', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    const setOn = id => spyLinks.forEach(a => {
+      const on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('on', on);
+      if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setOn(e.target.id); });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    spySections.forEach(sec => spy.observe(sec));
+  }
 </script>
 
 </body>
